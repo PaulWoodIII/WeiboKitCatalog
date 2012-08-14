@@ -22,7 +22,6 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [[WKOAuth2Client sharedInstance] setOauthToken:@"OAuth Token"];
     PWRootViewController *root = [[PWRootViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:root];
     [self.window setRootViewController:nav];

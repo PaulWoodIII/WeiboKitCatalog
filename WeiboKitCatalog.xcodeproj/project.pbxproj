@@ -19,6 +19,8 @@
 		DAF600BB15DA3BC50031871E /* SSToolkitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DAF600B515DA3B8C0031871E /* SSToolkitResources.bundle */; };
 		DAF600BD15DA3BDF0031871E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600BC15DA3BDF0031871E /* QuartzCore.framework */; };
 		DAF600D915DA3D570031871E /* PWRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF600D815DA3D570031871E /* PWRootViewController.m */; };
+		DAF6010C15DA4A4E0031871E /* WBAuthorize.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6010915DA4A4E0031871E /* WBAuthorize.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DAF6010D15DA4A4E0031871E /* WBAuthorizeWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6010B15DA4A4E0031871E /* WBAuthorizeWebView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,10 @@
 		DAF600BC15DA3BDF0031871E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DAF600D715DA3D570031871E /* PWRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWRootViewController.h; sourceTree = "<group>"; };
 		DAF600D815DA3D570031871E /* PWRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWRootViewController.m; sourceTree = "<group>"; };
+		DAF6010815DA4A4E0031871E /* WBAuthorize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthorize.h; sourceTree = "<group>"; };
+		DAF6010915DA4A4E0031871E /* WBAuthorize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthorize.m; sourceTree = "<group>"; };
+		DAF6010A15DA4A4E0031871E /* WBAuthorizeWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthorizeWebView.h; sourceTree = "<group>"; };
+		DAF6010B15DA4A4E0031871E /* WBAuthorizeWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthorizeWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +209,10 @@
 				DA5E78B515D9F7C800974187 /* PWAppDelegate.m */,
 				DAF600D715DA3D570031871E /* PWRootViewController.h */,
 				DAF600D815DA3D570031871E /* PWRootViewController.m */,
+				DAF6010815DA4A4E0031871E /* WBAuthorize.h */,
+				DAF6010915DA4A4E0031871E /* WBAuthorize.m */,
+				DAF6010A15DA4A4E0031871E /* WBAuthorizeWebView.h */,
+				DAF6010B15DA4A4E0031871E /* WBAuthorizeWebView.m */,
 			);
 			path = WeiboKitCatalog;
 			sourceTree = "<group>";
@@ -464,6 +474,8 @@
 				DA5E78B215D9F7C800974187 /* main.m in Sources */,
 				DA5E78B615D9F7C800974187 /* PWAppDelegate.m in Sources */,
 				DAF600D915DA3D570031871E /* PWRootViewController.m in Sources */,
+				DAF6010C15DA4A4E0031871E /* WBAuthorize.m in Sources */,
+				DAF6010D15DA4A4E0031871E /* WBAuthorizeWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
