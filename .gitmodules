@@ -1,0 +1,3 @@
+[submodule "Vendor/sidebar"]
+	path = Vendor/sidebar
+	url = https://github.com/mystcolor/JTRevealSidebarDemo.git

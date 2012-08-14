@@ -13,7 +13,60 @@
 		DA5E78B015D9F7C800974187 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5E78AE15D9F7C800974187 /* InfoPlist.strings */; };
 		DA5E78B215D9F7C800974187 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E78B115D9F7C800974187 /* main.m */; };
 		DA5E78B615D9F7C800974187 /* PWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E78B515D9F7C800974187 /* PWAppDelegate.m */; };
+		DAAD08CB15D9FE3A0004F231 /* libJTRevealSidebarV2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD08BF15D9FDED0004F231 /* libJTRevealSidebarV2.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAAD08BC15D9FDED0004F231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37E67F37159109C500043822;
+			remoteInfo = JTRevealSidebar;
+		};
+		DAAD08BE15D9FDED0004F231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37E67F201591080200043822;
+			remoteInfo = JTRevealSidebarV2;
+		};
+		DAAD08C015D9FDED0004F231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1AD4708114446391002EE1B0;
+			remoteInfo = JTRevealSidebarDemo;
+		};
+		DAAD08C215D9FDED0004F231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1AD470A514446392002EE1B0;
+			remoteInfo = JTRevealSidebarDemoTests;
+		};
+		DAAD08C415D9FDED0004F231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1A617E8B148FC4A6005EC465;
+			remoteInfo = JTRevealSidebarDemoV2;
+		};
+		DAAD08C615D9FDED0004F231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1A617EA1148FC4A7005EC465;
+			remoteInfo = JTRevealSidebarDemoV2Tests;
+		};
+		DAAD08C915D9FE0E0004F231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 37E67F1F1591080200043822;
+			remoteInfo = JTRevealSidebarV2;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DA5E78A115D9F7C800974187 /* WeiboKitCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiboKitCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +79,7 @@
 		DA5E78B315D9F7C800974187 /* WeiboKitCatalog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeiboKitCatalog-Prefix.pch"; sourceTree = "<group>"; };
 		DA5E78B415D9F7C800974187 /* PWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWAppDelegate.h; sourceTree = "<group>"; };
 		DA5E78B515D9F7C800974187 /* PWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PWAppDelegate.m; sourceTree = "<group>"; };
+		DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = JTRevealSidebarDemo.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAD08CB15D9FE3A0004F231 /* libJTRevealSidebarV2.a in Frameworks */,
 				DA5E78A615D9F7C800974187 /* UIKit.framework in Frameworks */,
 				DA5E78A815D9F7C800974187 /* Foundation.framework in Frameworks */,
 				DA5E78AA15D9F7C800974187 /* CoreGraphics.framework in Frameworks */,
@@ -47,6 +102,7 @@
 			children = (
 				DA5E78AB15D9F7C800974187 /* WeiboKitCatalog */,
 				DA5E78A415D9F7C800974187 /* Frameworks */,
+				DAAD083D15D9FDED0004F231 /* Vendor */,
 				DA5E78A215D9F7C800974187 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +146,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DAAD083D15D9FDED0004F231 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DAAD083E15D9FDED0004F231 /* sidebar */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		DAAD083E15D9FDED0004F231 /* sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */,
+			);
+			path = sidebar;
+			sourceTree = "<group>";
+		};
+		DAAD086315D9FDED0004F231 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAAD08BD15D9FDED0004F231 /* libJTRevealSidebar.a */,
+				DAAD08BF15D9FDED0004F231 /* libJTRevealSidebarV2.a */,
+				DAAD08C115D9FDED0004F231 /* JTRevealSidebarDemo.app */,
+				DAAD08C315D9FDED0004F231 /* JTRevealSidebarDemoTests.octest */,
+				DAAD08C515D9FDED0004F231 /* JTRevealSidebarDemoV2.app */,
+				DAAD08C715D9FDED0004F231 /* JTRevealSidebarDemoV2Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,6 +189,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DAAD08CA15D9FE0E0004F231 /* PBXTargetDependency */,
 			);
 			name = WeiboKitCatalog;
 			productName = WeiboKitCatalog;
@@ -130,12 +216,63 @@
 			mainGroup = DA5E789615D9F7C800974187;
 			productRefGroup = DA5E78A215D9F7C800974187 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DAAD086315D9FDED0004F231 /* Products */;
+					ProjectRef = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DA5E78A015D9F7C800974187 /* WeiboKitCatalog */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DAAD08BD15D9FDED0004F231 /* libJTRevealSidebar.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libJTRevealSidebar.a;
+			remoteRef = DAAD08BC15D9FDED0004F231 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DAAD08BF15D9FDED0004F231 /* libJTRevealSidebarV2.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libJTRevealSidebarV2.a;
+			remoteRef = DAAD08BE15D9FDED0004F231 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DAAD08C115D9FDED0004F231 /* JTRevealSidebarDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = JTRevealSidebarDemo.app;
+			remoteRef = DAAD08C015D9FDED0004F231 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DAAD08C315D9FDED0004F231 /* JTRevealSidebarDemoTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = JTRevealSidebarDemoTests.octest;
+			remoteRef = DAAD08C215D9FDED0004F231 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DAAD08C515D9FDED0004F231 /* JTRevealSidebarDemoV2.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = JTRevealSidebarDemoV2.app;
+			remoteRef = DAAD08C415D9FDED0004F231 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DAAD08C715D9FDED0004F231 /* JTRevealSidebarDemoV2Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = JTRevealSidebarDemoV2Tests.octest;
+			remoteRef = DAAD08C615D9FDED0004F231 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DA5E789F15D9F7C800974187 /* Resources */ = {
@@ -159,6 +296,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAAD08CA15D9FE0E0004F231 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JTRevealSidebarV2;
+			targetProxy = DAAD08C915D9FE0E0004F231 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DA5E78AE15D9F7C800974187 /* InfoPlist.strings */ = {
@@ -225,6 +370,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeiboKitCatalog/WeiboKitCatalog-Prefix.pch";
 				INFOPLIST_FILE = "WeiboKitCatalog/WeiboKitCatalog-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -236,6 +382,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeiboKitCatalog/WeiboKitCatalog-Prefix.pch";
 				INFOPLIST_FILE = "WeiboKitCatalog/WeiboKitCatalog-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -260,6 +407,7 @@
 				DA5E78BB15D9F7C800974187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

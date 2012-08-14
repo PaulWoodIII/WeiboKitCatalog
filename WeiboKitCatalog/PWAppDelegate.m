@@ -7,6 +7,9 @@
 //
 
 #import "PWAppDelegate.h"
+#import <JTRevealSidebarV2/UINavigationItem+JTRevealSidebarV2.h>
+#import <JTRevealSidebarV2/JTRevealSidebarV2Delegate.h>
+#import <JTRevealSidebarV2/UIViewController+JTRevealSidebarV2.h>
 
 @implementation PWAppDelegate
 
