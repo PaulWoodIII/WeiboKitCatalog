@@ -1,3 +1,6 @@
 [submodule "Vendor/sidebar"]
 	path = Vendor/sidebar
 	url = https://github.com/mystcolor/JTRevealSidebarDemo.git
+[submodule "Vendor/WeiboKit"]
+	path = Vendor/WeiboKit
+	url = https://github.com/PaulWoodIII/WeiboKit.git
