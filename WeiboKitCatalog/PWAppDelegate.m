@@ -12,6 +12,8 @@
 #import <JTRevealSidebarV2/UIViewController+JTRevealSidebarV2.h>
 #import <WeiboKit/WKOAuth2Client.h>
 
+#import "PWRootViewController.h"
+
 @implementation PWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -19,6 +21,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    [[WKOAuth2Client sharedInstance] setOauthToken:@"OAuth Token"];
+    PWRootViewController *root = [[PWRootViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:root];
+    [self.window setRootViewController:nav];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
