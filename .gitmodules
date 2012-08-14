@@ -4,3 +4,6 @@
 [submodule "Vendor/WeiboKit"]
 	path = Vendor/WeiboKit
 	url = https://github.com/PaulWoodIII/WeiboKit.git
+[submodule "Vendor/sstoolkit"]
+	path = Vendor/sstoolkit
+	url = https://github.com/samsoffes/sstoolkit.git
