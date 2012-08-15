@@ -15,12 +15,11 @@
 		DA5E78B615D9F7C800974187 /* PWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E78B515D9F7C800974187 /* PWAppDelegate.m */; };
 		DA902FAC15DA115300F02E0D /* libWeiboKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA902FA715DA114700F02E0D /* libWeiboKit.a */; };
 		DAAD08CB15D9FE3A0004F231 /* libJTRevealSidebarV2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD08BF15D9FDED0004F231 /* libJTRevealSidebarV2.a */; };
+		DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD357E215DB3E8F00DCA70A /* Security.framework */; };
 		DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600B115DA3B8C0031871E /* libSSToolkit.a */; };
 		DAF600BB15DA3BC50031871E /* SSToolkitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DAF600B515DA3B8C0031871E /* SSToolkitResources.bundle */; };
 		DAF600BD15DA3BDF0031871E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600BC15DA3BDF0031871E /* QuartzCore.framework */; };
 		DAF600D915DA3D570031871E /* PWRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF600D815DA3D570031871E /* PWRootViewController.m */; };
-		DAF6010C15DA4A4E0031871E /* WBAuthorize.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6010915DA4A4E0031871E /* WBAuthorize.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DAF6010D15DA4A4E0031871E /* WBAuthorizeWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6010B15DA4A4E0031871E /* WBAuthorizeWebView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,14 +143,11 @@
 		DA5E78B515D9F7C800974187 /* PWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PWAppDelegate.m; sourceTree = "<group>"; };
 		DA902F9E15DA114700F02E0D /* WeiboKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = WeiboKit.xcodeproj; sourceTree = "<group>"; };
 		DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = JTRevealSidebarDemo.xcodeproj; sourceTree = "<group>"; };
+		DAD357E215DB3E8F00DCA70A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DAF6003815DA3B8C0031871E /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SSToolkit.xcodeproj; sourceTree = "<group>"; };
 		DAF600BC15DA3BDF0031871E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DAF600D715DA3D570031871E /* PWRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWRootViewController.h; sourceTree = "<group>"; };
 		DAF600D815DA3D570031871E /* PWRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWRootViewController.m; sourceTree = "<group>"; };
-		DAF6010815DA4A4E0031871E /* WBAuthorize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthorize.h; sourceTree = "<group>"; };
-		DAF6010915DA4A4E0031871E /* WBAuthorize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthorize.m; sourceTree = "<group>"; };
-		DAF6010A15DA4A4E0031871E /* WBAuthorizeWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthorizeWebView.h; sourceTree = "<group>"; };
-		DAF6010B15DA4A4E0031871E /* WBAuthorizeWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthorizeWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */,
 				DAF600BD15DA3BDF0031871E /* QuartzCore.framework in Frameworks */,
 				DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */,
 				DA902FAC15DA115300F02E0D /* libWeiboKit.a in Frameworks */,
@@ -193,6 +190,7 @@
 		DA5E78A415D9F7C800974187 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAD357E215DB3E8F00DCA70A /* Security.framework */,
 				DAF600BC15DA3BDF0031871E /* QuartzCore.framework */,
 				DA5E78A515D9F7C800974187 /* UIKit.framework */,
 				DA5E78A715D9F7C800974187 /* Foundation.framework */,
@@ -209,10 +207,6 @@
 				DA5E78B515D9F7C800974187 /* PWAppDelegate.m */,
 				DAF600D715DA3D570031871E /* PWRootViewController.h */,
 				DAF600D815DA3D570031871E /* PWRootViewController.m */,
-				DAF6010815DA4A4E0031871E /* WBAuthorize.h */,
-				DAF6010915DA4A4E0031871E /* WBAuthorize.m */,
-				DAF6010A15DA4A4E0031871E /* WBAuthorizeWebView.h */,
-				DAF6010B15DA4A4E0031871E /* WBAuthorizeWebView.m */,
 			);
 			path = WeiboKitCatalog;
 			sourceTree = "<group>";
@@ -474,8 +468,6 @@
 				DA5E78B215D9F7C800974187 /* main.m in Sources */,
 				DA5E78B615D9F7C800974187 /* PWAppDelegate.m in Sources */,
 				DAF600D915DA3D570031871E /* PWRootViewController.m in Sources */,
-				DAF6010C15DA4A4E0031871E /* WBAuthorize.m in Sources */,
-				DAF6010D15DA4A4E0031871E /* WBAuthorizeWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
