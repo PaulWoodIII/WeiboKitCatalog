@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WKAuthorize.h"
 
-@interface RootViewController : UITableViewController <WKAuthorizeDelegate> {
+@interface RootViewController : UITableViewController {
     
 }
 
 @property (nonatomic, retain) NSMutableArray *results;
-@property (nonatomic, retain) WKAuthorize *authorize;
 
 @end

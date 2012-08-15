@@ -20,15 +20,8 @@
 {
     [super viewDidLoad];
     self.results = nil;
-    
-    WKAuthorize *auth = [[WKAuthorize alloc] initWithAppKey:@"" appSecret:@""];
-    [auth setDelegate:self];
-    [auth setRedirectURI:@"http://"];
-    self.authorize = auth;
-    [self.authorize startAuthorize];
+    [[WKOAuth2Client sharedInstance] startAuthorization];
 }
-
-
 
 #pragma mark - Table view data source
 
@@ -62,25 +55,5 @@
     cell.textLabel.text = [status text];
     return cell;
 }
-
-
-
-- (void)authorize:(WKAuthorize *)authorize didSucceedWithAccessToken:(NSString *)accessToken
-           userID:(NSString *)userID
-        expiresIn:(NSInteger)seconds{
-    [[WKOAuth2Client sharedInstance] setOauthToken:accessToken];
-    [[WKOAuth2Client sharedInstance] getHomeTimelineWithSuccess:^(NSMutableArray *statuses) {
-        self.results = statuses;
-        [self.tableView reloadData];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error fetching beers!");
-        NSLog(@"%@", error);
-    }];
-}
-
-- (void)authorize:(WKAuthorize *)authorize didFailWithError:(NSError *)error{
-    
-}
-
 
 @end
