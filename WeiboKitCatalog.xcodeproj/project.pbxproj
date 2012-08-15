@@ -16,10 +16,10 @@
 		DA902FAC15DA115300F02E0D /* libWeiboKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA902FA715DA114700F02E0D /* libWeiboKit.a */; };
 		DAAD08CB15D9FE3A0004F231 /* libJTRevealSidebarV2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD08BF15D9FDED0004F231 /* libJTRevealSidebarV2.a */; };
 		DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD357E215DB3E8F00DCA70A /* Security.framework */; };
+		DAD357E615DB416900DCA70A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD357E515DB416900DCA70A /* RootViewController.m */; };
 		DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600B115DA3B8C0031871E /* libSSToolkit.a */; };
 		DAF600BB15DA3BC50031871E /* SSToolkitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DAF600B515DA3B8C0031871E /* SSToolkitResources.bundle */; };
 		DAF600BD15DA3BDF0031871E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600BC15DA3BDF0031871E /* QuartzCore.framework */; };
-		DAF600D915DA3D570031871E /* PWRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF600D815DA3D570031871E /* PWRootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,10 +144,10 @@
 		DA902F9E15DA114700F02E0D /* WeiboKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = WeiboKit.xcodeproj; sourceTree = "<group>"; };
 		DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = JTRevealSidebarDemo.xcodeproj; sourceTree = "<group>"; };
 		DAD357E215DB3E8F00DCA70A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DAD357E415DB416900DCA70A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		DAD357E515DB416900DCA70A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		DAF6003815DA3B8C0031871E /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SSToolkit.xcodeproj; sourceTree = "<group>"; };
 		DAF600BC15DA3BDF0031871E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		DAF600D715DA3D570031871E /* PWRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWRootViewController.h; sourceTree = "<group>"; };
-		DAF600D815DA3D570031871E /* PWRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWRootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,8 +205,8 @@
 				DA5E78AC15D9F7C800974187 /* Supporting Files */,
 				DA5E78B415D9F7C800974187 /* PWAppDelegate.h */,
 				DA5E78B515D9F7C800974187 /* PWAppDelegate.m */,
-				DAF600D715DA3D570031871E /* PWRootViewController.h */,
-				DAF600D815DA3D570031871E /* PWRootViewController.m */,
+				DAD357E415DB416900DCA70A /* RootViewController.h */,
+				DAD357E515DB416900DCA70A /* RootViewController.m */,
 			);
 			path = WeiboKitCatalog;
 			sourceTree = "<group>";
@@ -467,7 +467,7 @@
 			files = (
 				DA5E78B215D9F7C800974187 /* main.m in Sources */,
 				DA5E78B615D9F7C800974187 /* PWAppDelegate.m in Sources */,
-				DAF600D915DA3D570031871E /* PWRootViewController.m in Sources */,
+				DAD357E615DB416900DCA70A /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@
 #import <JTRevealSidebarV2/UIViewController+JTRevealSidebarV2.h>
 #import <WeiboKit/WKOAuth2Client.h>
 
-#import "PWRootViewController.h"
+#import "RootViewController.h"
 
 @implementation PWAppDelegate
 
@@ -22,7 +22,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    PWRootViewController *root = [[PWRootViewController alloc] init];
+    RootViewController *root = [[RootViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:root];
     [self.window setRootViewController:nav];
     
