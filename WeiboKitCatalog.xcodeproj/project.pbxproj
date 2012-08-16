@@ -13,9 +13,14 @@
 		DA5E78B015D9F7C800974187 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5E78AE15D9F7C800974187 /* InfoPlist.strings */; };
 		DA5E78B215D9F7C800974187 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E78B115D9F7C800974187 /* main.m */; };
 		DA5E78B615D9F7C800974187 /* PWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E78B515D9F7C800974187 /* PWAppDelegate.m */; };
-		DA7462F115DC96BE00B6EBE6 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7462F015DC96BE00B6EBE6 /* SidebarViewController.m */; };
+		DA7462F415DC9B5000B6EBE6 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7462F315DC9B5000B6EBE6 /* ListViewController.m */; };
+		DA7462F715DC9B6A00B6EBE6 /* HomeTimelineList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7462F615DC9B6A00B6EBE6 /* HomeTimelineList.m */; };
+		DA7462FD15DCA36A00B6EBE6 /* UINavigationItem+JTRevealSidebarV2.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7462FA15DCA35600B6EBE6 /* UINavigationItem+JTRevealSidebarV2.m */; };
+		DA7462FE15DCA36A00B6EBE6 /* UIViewController+JTRevealSidebarV2.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7462FC15DCA35600B6EBE6 /* UIViewController+JTRevealSidebarV2.m */; };
+		DA74630115DCB28B00B6EBE6 /* FriendsTimelineList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA74630015DCB28B00B6EBE6 /* FriendsTimelineList.m */; };
+		DA74630415DCB44500B6EBE6 /* PaulWoodTimelineList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA74630315DCB44500B6EBE6 /* PaulWoodTimelineList.m */; };
+		DA74630715DCCB8F00B6EBE6 /* SelfTimelineList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA74630615DCCB8F00B6EBE6 /* SelfTimelineList.m */; };
 		DA902FAC15DA115300F02E0D /* libWeiboKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA902FA715DA114700F02E0D /* libWeiboKit.a */; };
-		DAAD08CB15D9FE3A0004F231 /* libJTRevealSidebarV2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD08BF15D9FDED0004F231 /* libJTRevealSidebarV2.a */; };
 		DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD357E215DB3E8F00DCA70A /* Security.framework */; };
 		DAD357E615DB416900DCA70A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD357E515DB416900DCA70A /* RootViewController.m */; };
 		DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600B115DA3B8C0031871E /* libSSToolkit.a */; };
@@ -44,55 +49,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = DACCEE6715DA07ED00A8BD52;
 			remoteInfo = WeiboKit;
-		};
-		DAAD08BC15D9FDED0004F231 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 37E67F37159109C500043822;
-			remoteInfo = JTRevealSidebar;
-		};
-		DAAD08BE15D9FDED0004F231 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 37E67F201591080200043822;
-			remoteInfo = JTRevealSidebarV2;
-		};
-		DAAD08C015D9FDED0004F231 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1AD4708114446391002EE1B0;
-			remoteInfo = JTRevealSidebarDemo;
-		};
-		DAAD08C215D9FDED0004F231 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1AD470A514446392002EE1B0;
-			remoteInfo = JTRevealSidebarDemoTests;
-		};
-		DAAD08C415D9FDED0004F231 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1A617E8B148FC4A6005EC465;
-			remoteInfo = JTRevealSidebarDemoV2;
-		};
-		DAAD08C615D9FDED0004F231 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1A617EA1148FC4A7005EC465;
-			remoteInfo = JTRevealSidebarDemoV2Tests;
-		};
-		DAAD08C915D9FE0E0004F231 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 37E67F1F1591080200043822;
-			remoteInfo = JTRevealSidebarV2;
 		};
 		DAF600B015DA3B8C0031871E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -142,10 +98,22 @@
 		DA5E78B315D9F7C800974187 /* WeiboKitCatalog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeiboKitCatalog-Prefix.pch"; sourceTree = "<group>"; };
 		DA5E78B415D9F7C800974187 /* PWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWAppDelegate.h; sourceTree = "<group>"; };
 		DA5E78B515D9F7C800974187 /* PWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PWAppDelegate.m; sourceTree = "<group>"; };
-		DA7462EF15DC96BE00B6EBE6 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
-		DA7462F015DC96BE00B6EBE6 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		DA7462F215DC9B5000B6EBE6 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		DA7462F315DC9B5000B6EBE6 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		DA7462F515DC9B6A00B6EBE6 /* HomeTimelineList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTimelineList.h; sourceTree = "<group>"; };
+		DA7462F615DC9B6A00B6EBE6 /* HomeTimelineList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTimelineList.m; sourceTree = "<group>"; };
+		DA7462F815DCA35600B6EBE6 /* JTRevealSidebarV2Delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JTRevealSidebarV2Delegate.h; path = JTRevealSidebarV2/JTRevealSidebarV2Delegate.h; sourceTree = "<group>"; };
+		DA7462F915DCA35600B6EBE6 /* UINavigationItem+JTRevealSidebarV2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+JTRevealSidebarV2.h"; path = "JTRevealSidebarV2/UINavigationItem+JTRevealSidebarV2.h"; sourceTree = "<group>"; };
+		DA7462FA15DCA35600B6EBE6 /* UINavigationItem+JTRevealSidebarV2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+JTRevealSidebarV2.m"; path = "JTRevealSidebarV2/UINavigationItem+JTRevealSidebarV2.m"; sourceTree = "<group>"; };
+		DA7462FB15DCA35600B6EBE6 /* UIViewController+JTRevealSidebarV2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIViewController+JTRevealSidebarV2.h"; path = "JTRevealSidebarV2/UIViewController+JTRevealSidebarV2.h"; sourceTree = "<group>"; };
+		DA7462FC15DCA35600B6EBE6 /* UIViewController+JTRevealSidebarV2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JTRevealSidebarV2.m"; path = "JTRevealSidebarV2/UIViewController+JTRevealSidebarV2.m"; sourceTree = "<group>"; };
+		DA7462FF15DCB28B00B6EBE6 /* FriendsTimelineList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTimelineList.h; sourceTree = "<group>"; };
+		DA74630015DCB28B00B6EBE6 /* FriendsTimelineList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTimelineList.m; sourceTree = "<group>"; };
+		DA74630215DCB44500B6EBE6 /* PaulWoodTimelineList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaulWoodTimelineList.h; sourceTree = "<group>"; };
+		DA74630315DCB44500B6EBE6 /* PaulWoodTimelineList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaulWoodTimelineList.m; sourceTree = "<group>"; };
+		DA74630515DCCB8F00B6EBE6 /* SelfTimelineList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfTimelineList.h; sourceTree = "<group>"; };
+		DA74630615DCCB8F00B6EBE6 /* SelfTimelineList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfTimelineList.m; sourceTree = "<group>"; };
 		DA902F9E15DA114700F02E0D /* WeiboKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = WeiboKit.xcodeproj; sourceTree = "<group>"; };
-		DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = JTRevealSidebarDemo.xcodeproj; sourceTree = "<group>"; };
 		DAD357E215DB3E8F00DCA70A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DAD357E415DB416900DCA70A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		DAD357E515DB416900DCA70A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
@@ -162,7 +130,6 @@
 				DAF600BD15DA3BDF0031871E /* QuartzCore.framework in Frameworks */,
 				DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */,
 				DA902FAC15DA115300F02E0D /* libWeiboKit.a in Frameworks */,
-				DAAD08CB15D9FE3A0004F231 /* libJTRevealSidebarV2.a in Frameworks */,
 				DA5E78A615D9F7C800974187 /* UIKit.framework in Frameworks */,
 				DA5E78A815D9F7C800974187 /* Foundation.framework in Frameworks */,
 				DA5E78AA15D9F7C800974187 /* CoreGraphics.framework in Frameworks */,
@@ -210,8 +177,16 @@
 				DA5E78B515D9F7C800974187 /* PWAppDelegate.m */,
 				DAD357E415DB416900DCA70A /* RootViewController.h */,
 				DAD357E515DB416900DCA70A /* RootViewController.m */,
-				DA7462EF15DC96BE00B6EBE6 /* SidebarViewController.h */,
-				DA7462F015DC96BE00B6EBE6 /* SidebarViewController.m */,
+				DA7462F215DC9B5000B6EBE6 /* ListViewController.h */,
+				DA7462F315DC9B5000B6EBE6 /* ListViewController.m */,
+				DA7462F515DC9B6A00B6EBE6 /* HomeTimelineList.h */,
+				DA7462F615DC9B6A00B6EBE6 /* HomeTimelineList.m */,
+				DA7462FF15DCB28B00B6EBE6 /* FriendsTimelineList.h */,
+				DA74630015DCB28B00B6EBE6 /* FriendsTimelineList.m */,
+				DA74630215DCB44500B6EBE6 /* PaulWoodTimelineList.h */,
+				DA74630315DCB44500B6EBE6 /* PaulWoodTimelineList.m */,
+				DA74630515DCCB8F00B6EBE6 /* SelfTimelineList.h */,
+				DA74630615DCCB8F00B6EBE6 /* SelfTimelineList.m */,
 			);
 			path = WeiboKitCatalog;
 			sourceTree = "<group>";
@@ -249,22 +224,13 @@
 		DAAD083E15D9FDED0004F231 /* sidebar */ = {
 			isa = PBXGroup;
 			children = (
-				DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */,
+				DA7462F815DCA35600B6EBE6 /* JTRevealSidebarV2Delegate.h */,
+				DA7462F915DCA35600B6EBE6 /* UINavigationItem+JTRevealSidebarV2.h */,
+				DA7462FA15DCA35600B6EBE6 /* UINavigationItem+JTRevealSidebarV2.m */,
+				DA7462FB15DCA35600B6EBE6 /* UIViewController+JTRevealSidebarV2.h */,
+				DA7462FC15DCA35600B6EBE6 /* UIViewController+JTRevealSidebarV2.m */,
 			);
 			path = sidebar;
-			sourceTree = "<group>";
-		};
-		DAAD086315D9FDED0004F231 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DAAD08BD15D9FDED0004F231 /* libJTRevealSidebar.a */,
-				DAAD08BF15D9FDED0004F231 /* libJTRevealSidebarV2.a */,
-				DAAD08C115D9FDED0004F231 /* JTRevealSidebarDemo.app */,
-				DAAD08C315D9FDED0004F231 /* JTRevealSidebarDemoTests.octest */,
-				DAAD08C515D9FDED0004F231 /* JTRevealSidebarDemoV2.app */,
-				DAAD08C715D9FDED0004F231 /* JTRevealSidebarDemoV2Tests.octest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		DAAD090815DA004B0004F231 /* WeiboKit */ = {
@@ -310,7 +276,6 @@
 				DAF600B915DA3BA50031871E /* PBXTargetDependency */,
 				DAF600B715DA3BA10031871E /* PBXTargetDependency */,
 				DA902FAB15DA114D00F02E0D /* PBXTargetDependency */,
-				DAAD08CA15D9FE0E0004F231 /* PBXTargetDependency */,
 			);
 			name = WeiboKitCatalog;
 			productName = WeiboKitCatalog;
@@ -354,10 +319,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = DAAD086315D9FDED0004F231 /* Products */;
-					ProjectRef = DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */;
-				},
-				{
 					ProductGroup = DAF6003915DA3B8C0031871E /* Products */;
 					ProjectRef = DAF6003815DA3B8C0031871E /* SSToolkit.xcodeproj */;
 				},
@@ -386,48 +347,6 @@
 			fileType = wrapper.framework;
 			path = WeiboKitmac.framework;
 			remoteRef = DA902FA815DA114700F02E0D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DAAD08BD15D9FDED0004F231 /* libJTRevealSidebar.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libJTRevealSidebar.a;
-			remoteRef = DAAD08BC15D9FDED0004F231 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DAAD08BF15D9FDED0004F231 /* libJTRevealSidebarV2.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libJTRevealSidebarV2.a;
-			remoteRef = DAAD08BE15D9FDED0004F231 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DAAD08C115D9FDED0004F231 /* JTRevealSidebarDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = JTRevealSidebarDemo.app;
-			remoteRef = DAAD08C015D9FDED0004F231 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DAAD08C315D9FDED0004F231 /* JTRevealSidebarDemoTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = JTRevealSidebarDemoTests.octest;
-			remoteRef = DAAD08C215D9FDED0004F231 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DAAD08C515D9FDED0004F231 /* JTRevealSidebarDemoV2.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = JTRevealSidebarDemoV2.app;
-			remoteRef = DAAD08C415D9FDED0004F231 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DAAD08C715D9FDED0004F231 /* JTRevealSidebarDemoV2Tests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = JTRevealSidebarDemoV2Tests.octest;
-			remoteRef = DAAD08C615D9FDED0004F231 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		DAF600B115DA3B8C0031871E /* libSSToolkit.a */ = {
@@ -470,10 +389,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7462FD15DCA36A00B6EBE6 /* UINavigationItem+JTRevealSidebarV2.m in Sources */,
+				DA7462FE15DCA36A00B6EBE6 /* UIViewController+JTRevealSidebarV2.m in Sources */,
 				DA5E78B215D9F7C800974187 /* main.m in Sources */,
 				DA5E78B615D9F7C800974187 /* PWAppDelegate.m in Sources */,
 				DAD357E615DB416900DCA70A /* RootViewController.m in Sources */,
-				DA7462F115DC96BE00B6EBE6 /* SidebarViewController.m in Sources */,
+				DA7462F415DC9B5000B6EBE6 /* ListViewController.m in Sources */,
+				DA7462F715DC9B6A00B6EBE6 /* HomeTimelineList.m in Sources */,
+				DA74630115DCB28B00B6EBE6 /* FriendsTimelineList.m in Sources */,
+				DA74630415DCB44500B6EBE6 /* PaulWoodTimelineList.m in Sources */,
+				DA74630715DCCB8F00B6EBE6 /* SelfTimelineList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,11 +409,6 @@
 			isa = PBXTargetDependency;
 			name = WeiboKit;
 			targetProxy = DA902FAA15DA114D00F02E0D /* PBXContainerItemProxy */;
-		};
-		DAAD08CA15D9FE0E0004F231 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JTRevealSidebarV2;
-			targetProxy = DAAD08C915D9FE0E0004F231 /* PBXContainerItemProxy */;
 		};
 		DAF600B715DA3BA10031871E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -572,7 +492,8 @@
 				GCC_PREFIX_HEADER = "WeiboKitCatalog/WeiboKitCatalog-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Vendor/WeiboKit\"/**",
-					"\"$(SRCROOT)/Vendor/SSToolkit",
+					"\"$(SRCROOT)/Vendor/SSToolkit\"",
+					"$(SRCROOT)/Vendor/JTRevealSidebarDemo",
 				);
 				INFOPLIST_FILE = "WeiboKitCatalog/WeiboKitCatalog-Info.plist";
 				OTHER_LDFLAGS = (
@@ -595,7 +516,8 @@
 				GCC_PREFIX_HEADER = "WeiboKitCatalog/WeiboKitCatalog-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Vendor/WeiboKit\"/**",
-					"\"$(SRCROOT)/Vendor/SSToolkit",
+					"\"$(SRCROOT)/Vendor/SSToolkit\"",
+					"$(SRCROOT)/Vendor/JTRevealSidebarDemo",
 				);
 				INFOPLIST_FILE = "WeiboKitCatalog/WeiboKitCatalog-Info.plist";
 				OTHER_LDFLAGS = (

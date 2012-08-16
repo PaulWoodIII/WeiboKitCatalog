@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JTRevealSidebarV2Delegate.h"
 
-@interface RootViewController : UITableViewController {
+@class ListViewController;
+
+@interface RootViewController : UITableViewController <JTRevealSidebarV2Delegate> {
     
 }
-
-@property (nonatomic, retain) NSMutableArray *results;
 
 @end
