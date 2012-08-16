@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import <WeiboKit/WKOAuth2Client.h>
 #import <WeiboKit/WKStatus.h>
+#import <WeiboKit/WKOAuthUser.h>
 
 @interface RootViewController ()
 
@@ -16,10 +17,41 @@
 
 @implementation RootViewController
 
+- (void)changedCurrentUser:(NSNotification *)note{
+    WKOAuthUser *user = note.object;
+    NSLog(@"%@",user);
+}
+
+- (void)authorizationSuccessful:(NSNotification *)note{
+    NSLog(@"%@",note.object);
+    if ([WKOAuthUser currentUser] == note.object) {
+        // The Current User is the user that authorized!
+        // Lets show their Statuses
+        [[WKOAuth2Client sharedInstance] getHomeTimelineWithSuccess:^(NSMutableArray *statuses) {
+            self.results = statuses;
+            [self.tableView reloadData];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error fetching statuses!");
+            NSLog(@"%@", error);
+        }];
+    }
+}
+
+- (void)authorizationFailure:(NSNotification *)note{
+    NSLog(@"%@",note.object);
+}
+
+- (void)registerForNotifications{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changedCurrentUser:) name:kWKCurrentUserChangedNotificationName object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authorizationSuccessful:) name:kWKAuthorizationSuccessfullNotificationName object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authorizationFailure:) name:kWKAuthorizationFailureNotificationName object:nil];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.results = nil;
+    [self registerForNotifications];
     [[WKOAuth2Client sharedInstance] startAuthorization];
 }
 

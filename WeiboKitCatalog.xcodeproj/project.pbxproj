@@ -13,6 +13,7 @@
 		DA5E78B015D9F7C800974187 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5E78AE15D9F7C800974187 /* InfoPlist.strings */; };
 		DA5E78B215D9F7C800974187 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E78B115D9F7C800974187 /* main.m */; };
 		DA5E78B615D9F7C800974187 /* PWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E78B515D9F7C800974187 /* PWAppDelegate.m */; };
+		DA7462F115DC96BE00B6EBE6 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7462F015DC96BE00B6EBE6 /* SidebarViewController.m */; };
 		DA902FAC15DA115300F02E0D /* libWeiboKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA902FA715DA114700F02E0D /* libWeiboKit.a */; };
 		DAAD08CB15D9FE3A0004F231 /* libJTRevealSidebarV2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD08BF15D9FDED0004F231 /* libJTRevealSidebarV2.a */; };
 		DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD357E215DB3E8F00DCA70A /* Security.framework */; };
@@ -141,6 +142,8 @@
 		DA5E78B315D9F7C800974187 /* WeiboKitCatalog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeiboKitCatalog-Prefix.pch"; sourceTree = "<group>"; };
 		DA5E78B415D9F7C800974187 /* PWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWAppDelegate.h; sourceTree = "<group>"; };
 		DA5E78B515D9F7C800974187 /* PWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PWAppDelegate.m; sourceTree = "<group>"; };
+		DA7462EF15DC96BE00B6EBE6 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		DA7462F015DC96BE00B6EBE6 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
 		DA902F9E15DA114700F02E0D /* WeiboKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = WeiboKit.xcodeproj; sourceTree = "<group>"; };
 		DAAD086215D9FDED0004F231 /* JTRevealSidebarDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = JTRevealSidebarDemo.xcodeproj; sourceTree = "<group>"; };
 		DAD357E215DB3E8F00DCA70A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -207,6 +210,8 @@
 				DA5E78B515D9F7C800974187 /* PWAppDelegate.m */,
 				DAD357E415DB416900DCA70A /* RootViewController.h */,
 				DAD357E515DB416900DCA70A /* RootViewController.m */,
+				DA7462EF15DC96BE00B6EBE6 /* SidebarViewController.h */,
+				DA7462F015DC96BE00B6EBE6 /* SidebarViewController.m */,
 			);
 			path = WeiboKitCatalog;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 				DA5E78B215D9F7C800974187 /* main.m in Sources */,
 				DA5E78B615D9F7C800974187 /* PWAppDelegate.m in Sources */,
 				DAD357E615DB416900DCA70A /* RootViewController.m in Sources */,
+				DA7462F115DC96BE00B6EBE6 /* SidebarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
