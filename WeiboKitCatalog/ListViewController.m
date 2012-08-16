@@ -23,7 +23,7 @@
 
 - (id)init{
     if ((self = [super init])){
-        self.results = nil;
+        _results = nil;
     }
     return self;
 }
