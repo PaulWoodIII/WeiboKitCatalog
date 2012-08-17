@@ -8,6 +8,7 @@
 
 #import "SelfTimelineList.h"
 #import <WeiboKit/WKOAuth2Client.h>
+#import <WeiboKit/WKList.h>
 #import <WeiboKit/WKStatus.h>
 #import <WeiboKit/WKOAuthUser.h>
 
@@ -18,14 +19,14 @@
     
     WKOAuthUser *user = [WKOAuthUser currentUser];
     
-    [[WKOAuth2Client sharedInstance] getUserTimeline:user withSuccess:^(NSMutableArray *statuses) {
-        self.results = statuses;
+    [[WKOAuth2Client sharedInstance] getUserTimeline:user withSuccess:^(WKList *list) {
+        self.results = list.statuses;
         [self.tableView reloadData];
-    }
-                                             failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                                 NSLog(@"Error fetching statuses!");
-                                                 NSLog(@"%@", error);
-                                             }];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error fetching statuses!");
+        NSLog(@"%@", error);
+    }];
+    
 }
 
 

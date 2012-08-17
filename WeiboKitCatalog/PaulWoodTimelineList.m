@@ -10,6 +10,7 @@
 #import <WeiboKit/WKOAuth2Client.h>
 #import <WeiboKit/WKStatus.h>
 #import <WeiboKit/WKUser.h>
+#import <WeiboKit/WKList.h>
 
 @implementation PaulWoodTimelineList
 
@@ -19,11 +20,10 @@
     WKUser *paulwood = [[WKUser alloc] init];
     paulwood.user_id = @"2214553562";
     
-    [[WKOAuth2Client sharedInstance] getUserTimeline:paulwood withSuccess:^(NSMutableArray *statuses) {
-        self.results = statuses;
+    [[WKOAuth2Client sharedInstance] getUserTimeline:paulwood withSuccess:^(WKList *list) {
+        self.results = list.statuses;
         [self.tableView reloadData];
-    }
-    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error fetching statuses!");
         NSLog(@"%@", error);
     }];

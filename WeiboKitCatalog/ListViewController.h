@@ -15,6 +15,7 @@
 @property (nonatomic, assign) SSPullToRefreshView *pullToRefreshView;
 
 @property (nonatomic, retain) NSMutableArray *results;
+@property (nonatomic, retain) NSMutableArray *cursors;
 @property (nonatomic, retain) UITableView *tableView;
 
 - (void)start;
