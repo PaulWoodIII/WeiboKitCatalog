@@ -25,14 +25,26 @@
 @property (nonatomic, retain) ListViewController *currentList;
 @property (nonatomic, retain) NSArray *listControllers;
 @property (nonatomic, strong) UITableView *leftSidebarView;
+@property BOOL loading;
+@property (nonatomic, strong) SSPullToRefreshView *pullToRefreshView;
 
 - (BOOL)isLoggedIn;
 - (void)createListControllers;
 
-
 @end
 
 @implementation RootViewController
+
+#pragma mark -
+#pragma mark Pull To Refresh
+
+- (void)refresh {
+    
+}
+
+- (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    [self refresh];
+}
 
 #pragma mark -
 #pragma mark Sidebar
@@ -146,11 +158,12 @@
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         [self.tableView reloadData];
+        
+        self.pullToRefreshView = nil;
     }
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     self.currentList = nil;
     [self createListControllers];
@@ -160,7 +173,14 @@
     self.navigationItem.revealSidebarDelegate = self;
     
     [self setupUI];
+    
+    self.pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.tableView delegate:self];
+    
+}
 
+- (void)viewDidUnload{
+    [super viewDidUnload];
+    self.pullToRefreshView = nil;
 }
 
 #pragma mark - Table view data source
@@ -252,6 +272,8 @@
         list.tableView = self.tableView;
         [list start];
         self.currentList = list;
+        [self.pullToRefreshView finishLoading];
+        self.pullToRefreshView.delegate = self.currentList;
     }
 
     [self.navigationController setRevealedState:JTRevealedStateNo];

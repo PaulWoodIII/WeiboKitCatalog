@@ -12,13 +12,29 @@
 #import <WeiboKit/WKOAuthUser.h>
 
 @interface ListViewController ()
-
 @end
 
 @implementation ListViewController
 
+#pragma mark -
+#pragma mark Pull To Refresh
+
 - (void)start{
     
+}
+
+- (void)finishLoading{
+    [self.pullToRefreshView performSelector:@selector(finishLoading) withObject:nil afterDelay:1.0];
+}
+
+- (void)refreshData{
+    [self performSelector:@selector(finishLoading) withObject:nil afterDelay:1.0];
+}
+
+- (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    self.pullToRefreshView = view;
+    [view startLoading];
+    [self refreshData];
 }
 
 - (id)init{
@@ -33,6 +49,7 @@
         _tableView = tableView;
         _tableView.dataSource = self;
         _tableView.delegate = self;
+            
         [_tableView reloadData];
     }
 }

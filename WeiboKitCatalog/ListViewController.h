@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SSPullToRefresh.h"
 
-@interface ListViewController : NSObject <UITableViewDataSource, UITableViewDelegate>
+@interface ListViewController : NSObject <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate>
+
+@property BOOL loading;
+@property (nonatomic, assign) SSPullToRefreshView *pullToRefreshView;
 
 @property (nonatomic, retain) NSMutableArray *results;
 @property (nonatomic, retain) UITableView *tableView;
 
 - (void)start;
+- (void)refreshData;
+- (void)finishLoading;
 
 @end

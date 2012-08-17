@@ -7,3 +7,6 @@
 [submodule "Vendor/sstoolkit"]
 	path = Vendor/sstoolkit
 	url = https://github.com/samsoffes/sstoolkit.git
+[submodule "Vendor/sspulltorefresh"]
+	path = Vendor/sspulltorefresh
+	url = https://github.com/samsoffes/sspulltorefresh.git

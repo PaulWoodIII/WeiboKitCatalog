@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "JTRevealSidebarV2Delegate.h"
+#import "SSPullToRefresh.h"
 
 @class ListViewController;
 
-@interface RootViewController : UITableViewController <JTRevealSidebarV2Delegate> {
+@interface RootViewController : UITableViewController <JTRevealSidebarV2Delegate, SSPullToRefreshViewDelegate> {
     
 }
 

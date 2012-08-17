@@ -21,6 +21,9 @@
 		DA74630415DCB44500B6EBE6 /* PaulWoodTimelineList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA74630315DCB44500B6EBE6 /* PaulWoodTimelineList.m */; };
 		DA74630715DCCB8F00B6EBE6 /* SelfTimelineList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA74630615DCCB8F00B6EBE6 /* SelfTimelineList.m */; };
 		DA902FAC15DA115300F02E0D /* libWeiboKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA902FA715DA114700F02E0D /* libWeiboKit.a */; };
+		DACCE36F15DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36715DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DACCE37015DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36915DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DACCE37115DDEFA700DF8F36 /* SSPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36B15DDEFA700DF8F36 /* SSPullToRefreshView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD357E215DB3E8F00DCA70A /* Security.framework */; };
 		DAD357E615DB416900DCA70A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD357E515DB416900DCA70A /* RootViewController.m */; };
 		DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600B115DA3B8C0031871E /* libSSToolkit.a */; };
@@ -114,6 +117,13 @@
 		DA74630515DCCB8F00B6EBE6 /* SelfTimelineList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfTimelineList.h; sourceTree = "<group>"; };
 		DA74630615DCCB8F00B6EBE6 /* SelfTimelineList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfTimelineList.m; sourceTree = "<group>"; };
 		DA902F9E15DA114700F02E0D /* WeiboKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = WeiboKit.xcodeproj; sourceTree = "<group>"; };
+		DACCE36415DDEFA700DF8F36 /* SSPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefresh.h; sourceTree = "<group>"; };
+		DACCE36615DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefreshDefaultContentView.h; sourceTree = "<group>"; };
+		DACCE36715DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPullToRefreshDefaultContentView.m; sourceTree = "<group>"; };
+		DACCE36815DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefreshSimpleContentView.h; sourceTree = "<group>"; };
+		DACCE36915DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPullToRefreshSimpleContentView.m; sourceTree = "<group>"; };
+		DACCE36A15DDEFA700DF8F36 /* SSPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefreshView.h; sourceTree = "<group>"; };
+		DACCE36B15DDEFA700DF8F36 /* SSPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPullToRefreshView.m; sourceTree = "<group>"; };
 		DAD357E215DB3E8F00DCA70A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DAD357E415DB416900DCA70A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		DAD357E515DB416900DCA70A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
@@ -214,6 +224,7 @@
 		DAAD083D15D9FDED0004F231 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				DACCE36115DDEFA700DF8F36 /* sspulltorefresh */,
 				DAF6FF9B15DA3B8C0031871E /* sstoolkit */,
 				DAAD090815DA004B0004F231 /* WeiboKit */,
 				DAAD083E15D9FDED0004F231 /* sidebar */,
@@ -239,6 +250,20 @@
 				DA902F9E15DA114700F02E0D /* WeiboKit.xcodeproj */,
 			);
 			path = WeiboKit;
+			sourceTree = "<group>";
+		};
+		DACCE36115DDEFA700DF8F36 /* sspulltorefresh */ = {
+			isa = PBXGroup;
+			children = (
+				DACCE36415DDEFA700DF8F36 /* SSPullToRefresh.h */,
+				DACCE36615DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.h */,
+				DACCE36715DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m */,
+				DACCE36815DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.h */,
+				DACCE36915DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m */,
+				DACCE36A15DDEFA700DF8F36 /* SSPullToRefreshView.h */,
+				DACCE36B15DDEFA700DF8F36 /* SSPullToRefreshView.m */,
+			);
+			path = sspulltorefresh;
 			sourceTree = "<group>";
 		};
 		DAF6003915DA3B8C0031871E /* Products */ = {
@@ -399,6 +424,9 @@
 				DA74630115DCB28B00B6EBE6 /* FriendsTimelineList.m in Sources */,
 				DA74630415DCB44500B6EBE6 /* PaulWoodTimelineList.m in Sources */,
 				DA74630715DCCB8F00B6EBE6 /* SelfTimelineList.m in Sources */,
+				DACCE36F15DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m in Sources */,
+				DACCE37015DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m in Sources */,
+				DACCE37115DDEFA700DF8F36 /* SSPullToRefreshView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
