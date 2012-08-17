@@ -8,6 +8,7 @@
 
 #import "ListViewController.h"
 #import <WeiboKit/WKOAuth2Client.h>
+#import <WeiboKit/WKList.h>
 #import <WeiboKit/WKStatus.h>
 #import <WeiboKit/WKOAuthUser.h>
 
@@ -15,6 +16,7 @@
 @end
 
 @implementation ListViewController
+
 
 #pragma mark -
 #pragma mark Pull To Refresh
@@ -85,6 +87,55 @@
     WKStatus *status = [self.results objectAtIndex:indexPath.row];
     cell.textLabel.text = [status text];
     return cell;
+}
+
+#pragma mark - Cursor Logic
+
+- (void)updateCursorArrayWithList:(WKList *)list{
+    
+//TODO: This is incomplete
+    
+    if (!self.cursors) {
+        // Initialize the cursors
+        NSNumber *top;
+        NSNumber *bottom;
+        
+        if ([list.previous_cursor compare:[NSNumber numberWithInteger:0]] == NSOrderedSame && [list.statuses count] > 0) {
+            top = [(WKStatus *)[list.statuses objectAtIndex:0] idNumber];
+        }
+        else if(list.previous_cursor){
+            top = [list.previous_cursor copy];
+        }
+        
+        // Your very last post was loaded?
+        if ([list.next_cursor compare:[NSNumber numberWithInteger:0]] == NSOrderedSame && [list.statuses count] > 0) {
+            bottom = [(WKStatus *)[list.statuses objectAtIndex:0] idNumber];
+        }
+        else if (list.next_cursor){
+            bottom = [list.next_cursor copy];
+        }
+        
+        self.cursors = [NSMutableArray arrayWithObjects:top, bottom, nil];
+    }
+    else{
+        NSNumber *inc_previous_cursor = [list.previous_cursor copy];
+        NSNumber *inc_next_cursor = [list.next_cursor copy];
+        
+        NSNumber *current_top = [self.cursors objectAtIndex:0];
+        NSNumber *current_bottom = [self.cursors lastObject];
+        
+        if ([current_top compare:inc_previous_cursor] == NSOrderedAscending) {
+            // New Top
+            [self.cursors insertObject:inc_previous_cursor atIndex:0];
+            [self.cursors removeObject:current_top];
+        }
+        
+        if ([current_bottom compare:inc_next_cursor] == NSOrderedAscending) {
+            // We are loading from the bottom
+            [self.cursors removeObject:current_bottom];
+            [self.cursors addObject:inc_next_cursor];
+        }
+    }
 }
 
 @end

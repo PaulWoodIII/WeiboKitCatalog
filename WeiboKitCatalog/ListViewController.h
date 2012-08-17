@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "SSPullToRefresh.h"
 
+@class WKList;
+
 @interface ListViewController : NSObject <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate>
 
 @property BOOL loading;
 @property (nonatomic, assign) SSPullToRefreshView *pullToRefreshView;
-
 @property (nonatomic, retain) NSMutableArray *results;
 @property (nonatomic, retain) NSMutableArray *cursors;
 @property (nonatomic, retain) UITableView *tableView;
@@ -21,5 +22,6 @@
 - (void)start;
 - (void)refreshData;
 - (void)finishLoading;
+- (void)updateCursorArrayWithList:(WKList *)list;
 
 @end

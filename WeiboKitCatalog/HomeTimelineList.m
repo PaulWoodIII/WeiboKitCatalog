@@ -17,23 +17,51 @@
 
 @implementation HomeTimelineList
 
+- (void)loadFromBottom{
+    
+    NSLog(@"loadFromBottom HomeTimelineList");
+    
+    [[WKOAuth2Client sharedInstance] getHomeTimelineSinceStatus:nil
+                                              withMaximumStatus:[self.cursors lastObject]
+                                                          count:25
+    withSuccess:^(WKList *list) {
+        if ([list.statuses count] > 0) {
+            
+            [self.results addObjectsFromArray:list.statuses];
+            [self.tableView reloadData];
+        }
+        [self updateCursorArrayWithList:list];
+        [self finishLoading];
+        NSLog(@"Finished HomeTimelineList loadFromBottom");
+    }
+    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error fetching HomeTimelineList statuses! loadFromBottom");
+            NSLog(@"%@", error);
+            [self finishLoading];
+    }];
+}
+
+
 - (void)refreshData{
     
-    [[WKOAuth2Client sharedInstance] getHomeTimelineSinceStatus:[self.results objectAtIndex:0]
-                                                 startingAtPage:1
-                                                          count:2
+    NSLog(@"Refreshing HomeTimelineList");
+    
+    [[WKOAuth2Client sharedInstance] getHomeTimelineSinceStatus:[self.cursors objectAtIndex:0]
+                                                          count:25
 
     withSuccess:^(WKList *list) {
         if ([list.statuses count] > 0) {
+            
             [self.results insertObjects:list.statuses
-                              atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [list.statuses count] - 1)]];
+                              atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [list.statuses count])]];
             [self.tableView reloadData];
         }
+        [self updateCursorArrayWithList:list];
         [self finishLoading];
-
+        NSLog(@"Finished HomeTimelineList refreshData");
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error fetching statuses!");
+        NSLog(@"Error fetching HomeTimelineList statuses! refreshData");
         NSLog(@"%@", error);
         [self finishLoading];
     }];
@@ -44,6 +72,7 @@
     // Lets show their Statuses
     [[WKOAuth2Client sharedInstance] getHomeTimelineWithSuccess:^(WKList *list) {
         self.results = list.statuses;
+        [self updateCursorArrayWithList:list];
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error fetching statuses!");

@@ -289,8 +289,8 @@
     self.currentListIndex = 0;
     
     NSArray *list = [[NSArray alloc] initWithObjects:
-                     [[NSDictionary alloc] initWithObjectsAndKeys: @"SelfTimelineList",@"controller", @"My Timeline", @"name", nil],
                      [[NSDictionary alloc] initWithObjectsAndKeys: @"HomeTimelineList",@"controller", @"Home Timeline", @"name", nil],
+                     [[NSDictionary alloc] initWithObjectsAndKeys: @"SelfTimelineList",@"controller", @"My Timeline", @"name", nil],
                      [[NSDictionary alloc] initWithObjectsAndKeys: @"FriendsTimelineList",@"controller", @"Friends Timeline", @"name", nil],
                      [[NSDictionary alloc] initWithObjectsAndKeys: @"PaulWoodTimelineList",@"controller", @"Pauls Timeline", @"name", nil],
                      
