@@ -26,6 +26,8 @@
 		DACCE37115DDEFA700DF8F36 /* SSPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36B15DDEFA700DF8F36 /* SSPullToRefreshView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD357E215DB3E8F00DCA70A /* Security.framework */; };
 		DAD357E615DB416900DCA70A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD357E515DB416900DCA70A /* RootViewController.m */; };
+		DAEF71C715E11D830031B789 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEF71C515E11D830031B789 /* ComposeViewController.m */; };
+		DAEF71C815E11D830031B789 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAEF71C615E11D830031B789 /* ComposeViewController.xib */; };
 		DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600B115DA3B8C0031871E /* libSSToolkit.a */; };
 		DAF600BB15DA3BC50031871E /* SSToolkitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DAF600B515DA3B8C0031871E /* SSToolkitResources.bundle */; };
 		DAF600BD15DA3BDF0031871E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600BC15DA3BDF0031871E /* QuartzCore.framework */; };
@@ -127,6 +129,9 @@
 		DAD357E215DB3E8F00DCA70A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DAD357E415DB416900DCA70A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		DAD357E515DB416900DCA70A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		DAEF71C415E11D830031B789 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		DAEF71C515E11D830031B789 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		DAEF71C615E11D830031B789 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
 		DAF6003815DA3B8C0031871E /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SSToolkit.xcodeproj; sourceTree = "<group>"; };
 		DAF600BC15DA3BDF0031871E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -197,6 +202,9 @@
 				DA74630315DCB44500B6EBE6 /* PaulWoodTimelineList.m */,
 				DA74630515DCCB8F00B6EBE6 /* SelfTimelineList.h */,
 				DA74630615DCCB8F00B6EBE6 /* SelfTimelineList.m */,
+				DAEF71C415E11D830031B789 /* ComposeViewController.h */,
+				DAEF71C515E11D830031B789 /* ComposeViewController.m */,
+				DAEF71C615E11D830031B789 /* ComposeViewController.xib */,
 			);
 			path = WeiboKitCatalog;
 			sourceTree = "<group>";
@@ -404,6 +412,7 @@
 			files = (
 				DA5E78B015D9F7C800974187 /* InfoPlist.strings in Resources */,
 				DAF600BB15DA3BC50031871E /* SSToolkitResources.bundle in Resources */,
+				DAEF71C815E11D830031B789 /* ComposeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +436,7 @@
 				DACCE36F15DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m in Sources */,
 				DACCE37015DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m in Sources */,
 				DACCE37115DDEFA700DF8F36 /* SSPullToRefreshView.m in Sources */,
+				DAEF71C715E11D830031B789 /* ComposeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

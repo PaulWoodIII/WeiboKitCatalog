@@ -17,7 +17,7 @@
 #import "UINavigationItem+JTRevealSidebarV2.h"
 
 #import "ListViewController.h"
-#import "HomeTimelineList.h"
+#import "ComposeViewController.h"
 
 @interface RootViewController ()
 
@@ -107,7 +107,7 @@
 - (void)logout{
     
     WKOAuthUser *user = [WKOAuthUser alloc];
-    user.user_id = @"";
+    user.user_id = nil;
     user.accessToken = @"";
     [WKOAuthUser setCurrentUser:user];
     
@@ -144,7 +144,7 @@
         UIBarButtonItem *sideBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(revealLeftSidebar:)];
         [self.navigationItem setLeftBarButtonItem:sideBarButton animated:YES];
         
-        UIBarButtonItem *postBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Post" style:UIBarButtonItemStyleBordered target:self action:@selector(post)];
+        UIBarButtonItem *postBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(post)];
         [self.navigationItem setRightBarButtonItem:postBarButton];
         
         [self sidebarTableView:self.leftSidebarView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:self.currentListIndex]];
@@ -288,7 +288,6 @@
     [cell setHighlighted:NO animated:YES];
 }
 
-
 #pragma mark -
 #pragma mark The List Controllers
 
@@ -312,7 +311,8 @@
 #pragma mark The Compose Controller and Posting
 
 - (void)post{
-    
+    ComposeViewController *composeView = [[ComposeViewController alloc] init];
+    [self presentViewController:composeView animated:YES completion:nil];
 }
 
 @end

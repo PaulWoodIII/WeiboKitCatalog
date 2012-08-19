@@ -19,7 +19,7 @@
     
     WKOAuthUser *user = [WKOAuthUser currentUser];
     
-    [[WKOAuth2Client sharedInstance] getUserTimeline:user withSuccess:^(WKList *list) {
+    [[WKOAuth2Client sharedInstance] getUserTimeline:user.user_id withSuccess:^(WKList *list) {
         self.results = list.statuses;
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

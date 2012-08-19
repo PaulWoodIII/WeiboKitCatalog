@@ -140,7 +140,7 @@
 }
 
 - (void)failedOperation:(AFHTTPRequestOperation *)operation withError:(NSError *)error{
-    NSLog(@"Error fetching HomeTimelineList statuses! loadFromBottom");
+    NSLog(@"Error fetching statuses!");
     NSLog(@"%@", error);
     [self finishLoading];
 }
