@@ -10,6 +10,8 @@
 #import "SSPullToRefresh.h"
 
 @class WKList;
+@class WKStatus;
+@class AFHTTPRequestOperation;
 
 @interface ListViewController : NSObject <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate>
 
@@ -20,8 +22,14 @@
 @property (nonatomic, retain) UITableView *tableView;
 
 - (void)start;
+- (void)startWithList:(WKList *)list;
 - (void)refreshData;
+- (void)refreshDataWithList:(WKList *)list;
+- (void)loadFromMiddleWithSince:(WKStatus *)since andMax:(WKStatus *)max atIndexPath:(NSIndexPath *)indexpath;
+- (void)loadFromMiddleWithList:(WKList *)list withSince:(WKStatus *)since andMax:(WKStatus *)max atIndexPath:(NSIndexPath *)indexpath;
+- (void)loadFromBottom;
+- (void)loadFromBottomWithList:(WKList *)list;
 - (void)finishLoading;
-- (void)updateCursorArrayWithList:(WKList *)list;
+- (void)failedOperation:(AFHTTPRequestOperation *)operation withError:(NSError *)error;
 
 @end

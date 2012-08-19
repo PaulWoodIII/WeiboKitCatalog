@@ -18,65 +18,102 @@
 @implementation HomeTimelineList
 
 - (void)loadFromBottom{
-    
+    // Load in data from the bottom of the timeline
     NSLog(@"loadFromBottom HomeTimelineList");
     
+    WKStatus *max = [self.results objectAtIndex:([self.results count] - 2)];
+    
     [[WKOAuth2Client sharedInstance] getHomeTimelineSinceStatus:nil
-                                              withMaximumStatus:[self.cursors lastObject]
-                                                          count:25
-    withSuccess:^(WKList *list) {
-        if ([list.statuses count] > 0) {
-            
-            [self.results addObjectsFromArray:list.statuses];
-            [self.tableView reloadData];
-        }
-        [self updateCursorArrayWithList:list];
-        [self finishLoading];
-        NSLog(@"Finished HomeTimelineList loadFromBottom");
+                                              withMaximumStatus:[max idNumber]
+                                                          count:5
+    withSuccess:^(WKList *list)
+    {
+        [self loadFromBottomWithList:list];
     }
-    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Error fetching HomeTimelineList statuses! loadFromBottom");
-            NSLog(@"%@", error);
-            [self finishLoading];
+    failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
+        [self failedOperation:operation withError:error];
+    }];
+}
+
+- (void)loadFromMiddleWithSince:(WKStatus *)since andMax:(WKStatus *)max atIndexPath:(NSIndexPath *)indexpath{
+    //Load in data from the middle of their timeline
+    NSLog(@"loadFromMiddleWithSince HomeTimelineList");
+    
+    [[WKOAuth2Client sharedInstance] getHomeTimelineSinceStatus:[since idNumber]
+                                              withMaximumStatus:[max idNumber]
+                                                          count:5
+    withSuccess:^(WKList *list)
+    {
+        [self loadFromMiddleWithList:list withSince:since andMax:max atIndexPath:indexpath];
+    }
+    failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
+        [self failedOperation:operation withError:error];
     }];
 }
 
 
 - (void)refreshData{
-    
+    // Refresh Data from the top of their timeline
     NSLog(@"Refreshing HomeTimelineList");
     
-    [[WKOAuth2Client sharedInstance] getHomeTimelineSinceStatus:[self.cursors objectAtIndex:0]
-                                                          count:25
+    NSObject *topdata = [self.results objectAtIndex:0];
+    WKStatus *topStatus;
+    if ([topdata isKindOfClass:[NSString class]]) {
+        // Load Old
+    }
+    else if ([topdata isKindOfClass:[WKStatus class]]){
+        topStatus = (WKStatus *)topdata;
+    }
+    
+    [[WKOAuth2Client sharedInstance] getHomeTimelineSinceStatus:[topStatus idNumber]
+                                                          count:5
 
     withSuccess:^(WKList *list) {
-        if ([list.statuses count] > 0) {
-            
-            [self.results insertObjects:list.statuses
-                              atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [list.statuses count])]];
-            [self.tableView reloadData];
-        }
-        [self updateCursorArrayWithList:list];
-        [self finishLoading];
-        NSLog(@"Finished HomeTimelineList refreshData");
+        [self refreshDataWithList:list];
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error fetching HomeTimelineList statuses! refreshData");
-        NSLog(@"%@", error);
-        [self finishLoading];
+        [self failedOperation:operation withError:error];
     }];
 }
 
 
 - (void)start{
-    // Lets show their Statuses
-    [[WKOAuth2Client sharedInstance] getHomeTimelineWithSuccess:^(WKList *list) {
-        self.results = list.statuses;
-        [self updateCursorArrayWithList:list];
-        [self.tableView reloadData];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error fetching statuses!");
-        NSLog(@"%@", error);
+    // start the timeline.
+    // soon we will load in what data we already have from Core Data
+    
+    // Stub
+    // for now we just create some fake data for testing
+    /*
+    WKStatus *fake1 = [[WKStatus alloc] init];
+    fake1.text= @"Fake 1";
+    fake1.idNumber = [NSNumber numberWithLongLong:3479052277477353];
+    fake1.idString = @"3479052277477353";
+    WKStatus *fake2 = [[WKStatus alloc] init];
+    fake2.text= @"Fake 2";
+    fake2.idNumber = [NSNumber numberWithLongLong:3479051277477353];
+    fake2.idString = @"3479051277477353";
+    self.results = [NSMutableArray arrayWithObjects: fake1, fake2, @"Load More", nil];
+    
+    NSMutableArray *cursorArray = [NSMutableArray arrayWithObjects:[fake1.idNumber copy], [fake2.idNumber copy], nil];
+    self.cursors = cursorArray;
+    
+    [self.tableView reloadData];
+     */
+    // End of stub
+    
+    NSLog(@"starting HomeTimelineList");
+    
+    [[WKOAuth2Client sharedInstance]
+     getHomeTimelineWithSuccess:^(WKList *list)
+    {
+        [self startWithList:list];
+    }
+    failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
+        [self failedOperation:operation withError:error];
+
     }];
 }
 

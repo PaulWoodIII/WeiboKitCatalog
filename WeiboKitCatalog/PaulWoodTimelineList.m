@@ -16,9 +16,7 @@
 
 - (void)start{
     // Lets show PaulWoods Statuses
-    
-    WKUser *paulwood = [[WKUser alloc] init];
-    paulwood.user_id = @"2214553562";
+    NSNumber *paulwood = [NSNumber numberWithLongLong:2214553562];
     
     [[WKOAuth2Client sharedInstance] getUserTimeline:paulwood withSuccess:^(WKList *list) {
         self.results = list.statuses;
