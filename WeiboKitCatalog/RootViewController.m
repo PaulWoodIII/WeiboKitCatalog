@@ -144,8 +144,8 @@
         UIBarButtonItem *sideBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(revealLeftSidebar:)];
         [self.navigationItem setLeftBarButtonItem:sideBarButton animated:YES];
         
-        UIBarButtonItem *logoutbarButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logout)];
-        [self.navigationItem setRightBarButtonItem:logoutbarButton];
+        UIBarButtonItem *postBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Post" style:UIBarButtonItemStyleBordered target:self action:@selector(post)];
+        [self.navigationItem setRightBarButtonItem:postBarButton];
         
         [self sidebarTableView:self.leftSidebarView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:self.currentListIndex]];
     }
@@ -263,21 +263,29 @@
 - (void)sidebarTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *listDescription = [self.listControllers objectAtIndex:indexPath.row];
-    Class class = NSClassFromString([listDescription objectForKey:@"controller"]);
+    NSString *action = [listDescription objectForKey:@"action"];
     
-    if (![self.currentList isMemberOfClass:class]) {
-        ListViewController *list = [[class alloc] init];
-        self.tableView.dataSource = nil;
-        self.tableView.delegate = nil;
-        list.tableView = self.tableView;
-        [list start];
-        self.currentList = list;
-        [self.pullToRefreshView finishLoading];
-        self.pullToRefreshView.delegate = self.currentList;
+    if ([action isEqualToString:@"logout"]) {
+        [self logout];
     }
-
+    else{
+        Class class = NSClassFromString(action);
+        
+        if (![self.currentList isMemberOfClass:class]) {
+            ListViewController *list = [[class alloc] init];
+            self.tableView.dataSource = nil;
+            self.tableView.delegate = nil;
+            list.tableView = self.tableView;
+            [list start];
+            self.currentList = list;
+            [self.pullToRefreshView finishLoading];
+            self.pullToRefreshView.delegate = self.currentList;
+        }
+    }
+    
     [self.navigationController setRevealedState:JTRevealedStateNo];
-
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell setHighlighted:NO animated:YES];
 }
 
 
@@ -289,14 +297,21 @@
     self.currentListIndex = 0;
     
     NSArray *list = [[NSArray alloc] initWithObjects:
-                     [[NSDictionary alloc] initWithObjectsAndKeys: @"HomeTimelineList",@"controller", @"Home Timeline", @"name", nil],
-                     [[NSDictionary alloc] initWithObjectsAndKeys: @"SelfTimelineList",@"controller", @"My Timeline", @"name", nil],
-                     [[NSDictionary alloc] initWithObjectsAndKeys: @"FriendsTimelineList",@"controller", @"Friends Timeline", @"name", nil],
-                     [[NSDictionary alloc] initWithObjectsAndKeys: @"PaulWoodTimelineList",@"controller", @"Pauls Timeline", @"name", nil],
-                     
+                     [[NSDictionary alloc] initWithObjectsAndKeys: @"HomeTimelineList",@"action", @"Home Timeline", @"name", nil],
+                     [[NSDictionary alloc] initWithObjectsAndKeys: @"SelfTimelineList",@"action", @"My Timeline", @"name", nil],
+                     [[NSDictionary alloc] initWithObjectsAndKeys: @"FriendsTimelineList",@"action", @"Friends Timeline", @"name", nil],
+                     [[NSDictionary alloc] initWithObjectsAndKeys: @"PaulWoodTimelineList",@"action", @"Pauls Timeline", @"name", nil],
+                     [[NSDictionary alloc] initWithObjectsAndKeys: @"logout",@"action", @"Logout", @"name", nil],
                      nil];
     
     self.listControllers = list;
+    
+}
+
+#pragma mark -
+#pragma mark The Compose Controller and Posting
+
+- (void)post{
     
 }
 
