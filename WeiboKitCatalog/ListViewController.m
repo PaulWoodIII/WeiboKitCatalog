@@ -11,6 +11,7 @@
 #import <WeiboKit/WKList.h>
 #import <WeiboKit/WKStatus.h>
 #import <WeiboKit/WKOAuthUser.h>
+#import "StatusCell.h"
 
 @interface ListViewController ()
 @end
@@ -176,19 +177,30 @@
     return [self.results count];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSObject *cellData = [self.results objectAtIndex:indexPath.row];
+    
+    if ([cellData isKindOfClass:[WKStatus class]]){
+        NSString * temp = [(WKStatus *)cellData text];
+        if(!temp)
+            temp = NSLocalizedString(@"REDACTED", @"");
+        
+        NSString * username = @"Paul";
+        if(!username)
+            username = @"<ERROR>";
+        
+        return [StatusCell cellHeightForStatusText:temp withUsername:username];
+    }
+    else {
+        // Load
+        return 44.0;
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                      reuseIdentifier:cellIdentifier];
-        cell.contentView.backgroundColor = self.tableView.backgroundColor;
-        cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
-        cell.textLabel.textColor = [UIColor darkGrayColor];
-        cell.textLabel.backgroundColor = cell.contentView.backgroundColor;
-        cell.detailTextLabel.backgroundColor = cell.textLabel.backgroundColor;
-    }
+    StatusCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatusCell"];
     
     NSObject *cellData = [self.results objectAtIndex:indexPath.row];
 
@@ -198,7 +210,18 @@
         cell.textLabel.text = (NSString *)cellData;
     }
     else if ([cellData isKindOfClass:[WKStatus class]]){
-        cell.textLabel.text = [(WKStatus *)cellData text];
+        WKStatus * status = (WKStatus *)cellData;
+        
+        NSString * temp = status.text;
+        if(!temp)
+            temp = NSLocalizedString(@"REDACTED", @"");
+        
+        NSString * username = @"status";
+        if(!username)
+            username = @"<ERROR>";
+        
+        [cell setStatusText:temp username:username pictureURL:nil];
+                
     }
 
     return cell;

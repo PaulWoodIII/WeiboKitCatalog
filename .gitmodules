@@ -10,3 +10,6 @@
 [submodule "Vendor/sspulltorefresh"]
 	path = Vendor/sspulltorefresh
 	url = https://github.com/samsoffes/sspulltorefresh.git
+[submodule "Vendor/TTTAttributedLabel"]
+	path = Vendor/TTTAttributedLabel
+	url = https://github.com/mattt/TTTAttributedLabel.git

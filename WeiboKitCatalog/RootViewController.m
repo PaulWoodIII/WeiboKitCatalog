@@ -176,6 +176,10 @@
     
     self.pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.tableView delegate:self];
     
+    [self.tableView registerNib:[UINib nibWithNibName:@"StatusCell"
+                                               bundle:[NSBundle mainBundle]]
+         forCellReuseIdentifier:@"StatusCell"];
+
 }
 
 - (void)viewDidUnload{

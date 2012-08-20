@@ -20,6 +20,11 @@
 		DA74630115DCB28B00B6EBE6 /* FriendsTimelineList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA74630015DCB28B00B6EBE6 /* FriendsTimelineList.m */; };
 		DA74630415DCB44500B6EBE6 /* PaulWoodTimelineList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA74630315DCB44500B6EBE6 /* PaulWoodTimelineList.m */; };
 		DA74630715DCCB8F00B6EBE6 /* SelfTimelineList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA74630615DCCB8F00B6EBE6 /* SelfTimelineList.m */; };
+		DA8B6BCF15E24A6E00E70E50 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8B6BB415E24A6E00E70E50 /* TTTAttributedLabel.m */; };
+		DA8B6BDE15E24ACA00E70E50 /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8B6BDD15E24ACA00E70E50 /* StatusCell.m */; };
+		DA8B6BE115E24CC000E70E50 /* NSAttributedString+heightforrect.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8B6BE015E24CC000E70E50 /* NSAttributedString+heightforrect.m */; };
+		DA8B6BE315E24DE400E70E50 /* StatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8B6BE215E24DE400E70E50 /* StatusCell.xib */; };
+		DA8B6BE515E24ED700E70E50 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8B6BE415E24ED700E70E50 /* CoreText.framework */; };
 		DA902FAC15DA115300F02E0D /* libWeiboKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA902FA715DA114700F02E0D /* libWeiboKit.a */; };
 		DACCE36F15DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36715DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DACCE37015DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36915DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -118,6 +123,14 @@
 		DA74630315DCB44500B6EBE6 /* PaulWoodTimelineList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaulWoodTimelineList.m; sourceTree = "<group>"; };
 		DA74630515DCCB8F00B6EBE6 /* SelfTimelineList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfTimelineList.h; sourceTree = "<group>"; };
 		DA74630615DCCB8F00B6EBE6 /* SelfTimelineList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfTimelineList.m; sourceTree = "<group>"; };
+		DA8B6BB315E24A6E00E70E50 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		DA8B6BB415E24A6E00E70E50 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		DA8B6BDC15E24ACA00E70E50 /* StatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusCell.h; sourceTree = "<group>"; };
+		DA8B6BDD15E24ACA00E70E50 /* StatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusCell.m; sourceTree = "<group>"; };
+		DA8B6BDF15E24CC000E70E50 /* NSAttributedString+heightforrect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+heightforrect.h"; sourceTree = "<group>"; };
+		DA8B6BE015E24CC000E70E50 /* NSAttributedString+heightforrect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+heightforrect.m"; sourceTree = "<group>"; };
+		DA8B6BE215E24DE400E70E50 /* StatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusCell.xib; sourceTree = "<group>"; };
+		DA8B6BE415E24ED700E70E50 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DA902F9E15DA114700F02E0D /* WeiboKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = WeiboKit.xcodeproj; sourceTree = "<group>"; };
 		DACCE36415DDEFA700DF8F36 /* SSPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefresh.h; sourceTree = "<group>"; };
 		DACCE36615DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefreshDefaultContentView.h; sourceTree = "<group>"; };
@@ -141,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8B6BE515E24ED700E70E50 /* CoreText.framework in Frameworks */,
 				DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */,
 				DAF600BD15DA3BDF0031871E /* QuartzCore.framework in Frameworks */,
 				DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */,
@@ -175,6 +189,7 @@
 		DA5E78A415D9F7C800974187 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA8B6BE415E24ED700E70E50 /* CoreText.framework */,
 				DAD357E215DB3E8F00DCA70A /* Security.framework */,
 				DAF600BC15DA3BDF0031871E /* QuartzCore.framework */,
 				DA5E78A515D9F7C800974187 /* UIKit.framework */,
@@ -205,6 +220,11 @@
 				DAEF71C415E11D830031B789 /* ComposeViewController.h */,
 				DAEF71C515E11D830031B789 /* ComposeViewController.m */,
 				DAEF71C615E11D830031B789 /* ComposeViewController.xib */,
+				DA8B6BDC15E24ACA00E70E50 /* StatusCell.h */,
+				DA8B6BDD15E24ACA00E70E50 /* StatusCell.m */,
+				DA8B6BE215E24DE400E70E50 /* StatusCell.xib */,
+				DA8B6BDF15E24CC000E70E50 /* NSAttributedString+heightforrect.h */,
+				DA8B6BE015E24CC000E70E50 /* NSAttributedString+heightforrect.m */,
 			);
 			path = WeiboKitCatalog;
 			sourceTree = "<group>";
@@ -220,6 +240,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DA8B6BAF15E24A6E00E70E50 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				DA8B6BB315E24A6E00E70E50 /* TTTAttributedLabel.h */,
+				DA8B6BB415E24A6E00E70E50 /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
 		DA902F9F15DA114700F02E0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +261,7 @@
 		DAAD083D15D9FDED0004F231 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				DA8B6BAF15E24A6E00E70E50 /* TTTAttributedLabel */,
 				DACCE36115DDEFA700DF8F36 /* sspulltorefresh */,
 				DAF6FF9B15DA3B8C0031871E /* sstoolkit */,
 				DAAD090815DA004B0004F231 /* WeiboKit */,
@@ -413,6 +443,7 @@
 				DA5E78B015D9F7C800974187 /* InfoPlist.strings in Resources */,
 				DAF600BB15DA3BC50031871E /* SSToolkitResources.bundle in Resources */,
 				DAEF71C815E11D830031B789 /* ComposeViewController.xib in Resources */,
+				DA8B6BE315E24DE400E70E50 /* StatusCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +468,9 @@
 				DACCE37015DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m in Sources */,
 				DACCE37115DDEFA700DF8F36 /* SSPullToRefreshView.m in Sources */,
 				DAEF71C715E11D830031B789 /* ComposeViewController.m in Sources */,
+				DA8B6BCF15E24A6E00E70E50 /* TTTAttributedLabel.m in Sources */,
+				DA8B6BDE15E24ACA00E70E50 /* StatusCell.m in Sources */,
+				DA8B6BE115E24CC000E70E50 /* NSAttributedString+heightforrect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
