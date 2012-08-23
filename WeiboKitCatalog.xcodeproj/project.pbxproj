@@ -27,6 +27,7 @@
 		DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD357E215DB3E8F00DCA70A /* Security.framework */; };
 		DAD357E615DB416900DCA70A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD357E515DB416900DCA70A /* RootViewController.m */; };
 		DAD3A6B515E5AF4500E152E6 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD3A69A15E5AF4500E152E6 /* TTTAttributedLabel.m */; };
+		DAD3A6C315E5AF7700E152E6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD3A6C215E5AF7700E152E6 /* CoreText.framework */; };
 		DAEF71C715E11D830031B789 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEF71C515E11D830031B789 /* ComposeViewController.m */; };
 		DAEF71C815E11D830031B789 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAEF71C615E11D830031B789 /* ComposeViewController.xib */; };
 		DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600B115DA3B8C0031871E /* libSSToolkit.a */; };
@@ -132,6 +133,7 @@
 		DAD357E515DB416900DCA70A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		DAD3A69915E5AF4500E152E6 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		DAD3A69A15E5AF4500E152E6 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		DAD3A6C215E5AF7700E152E6 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DAEF71C415E11D830031B789 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		DAEF71C515E11D830031B789 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		DAEF71C615E11D830031B789 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD3A6C315E5AF7700E152E6 /* CoreText.framework in Frameworks */,
 				DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */,
 				DAF600BD15DA3BDF0031871E /* QuartzCore.framework in Frameworks */,
 				DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */,
@@ -178,6 +181,7 @@
 		DA5E78A415D9F7C800974187 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAD3A6C215E5AF7700E152E6 /* CoreText.framework */,
 				DAD357E215DB3E8F00DCA70A /* Security.framework */,
 				DAF600BC15DA3BDF0031871E /* QuartzCore.framework */,
 				DA5E78A515D9F7C800974187 /* UIKit.framework */,
