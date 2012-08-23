@@ -12,9 +12,6 @@
 
 @interface StatusCell : UITableViewCell
 
-+(CGFloat)cellHeightForStatusText:(NSString*)text withUsername:(NSString*)username;
--(void)setStatusText:(NSString*)postText username:(NSString*)username pictureURL:(NSURL*)picURL;
-
 +(CGFloat)cellHeightForStatus:(WKStatus*)post;
 -(void)setStatus:(WKStatus*)post;
 

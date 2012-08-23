@@ -182,18 +182,10 @@
     NSObject *cellData = [self.results objectAtIndex:indexPath.row];
     
     if ([cellData isKindOfClass:[WKStatus class]]){
-        NSString * temp = [(WKStatus *)cellData text];
-        if(!temp)
-            temp = NSLocalizedString(@"REDACTED", @"");
-        
-        NSString * username = @"Paul";
-        if(!username)
-            username = @"<ERROR>";
-        
-        return [StatusCell cellHeightForStatusText:temp withUsername:username];
+        return [StatusCell cellHeightForStatus:(WKStatus *)cellData];
     }
     else {
-        // Load
+        // Loading Cell
         return 44.0;
     }
 }
@@ -210,18 +202,7 @@
         cell.textLabel.text = (NSString *)cellData;
     }
     else if ([cellData isKindOfClass:[WKStatus class]]){
-        WKStatus * status = (WKStatus *)cellData;
-        
-        NSString * temp = status.text;
-        if(!temp)
-            temp = NSLocalizedString(@"REDACTED", @"");
-        
-        NSString * username = @"status";
-        if(!username)
-            username = @"<ERROR>";
-        
-        [cell setStatusText:temp username:username pictureURL:nil];
-                
+        [cell setStatus:(WKStatus *)cellData];
     }
 
     return cell;

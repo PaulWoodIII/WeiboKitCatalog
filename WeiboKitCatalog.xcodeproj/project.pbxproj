@@ -26,9 +26,9 @@
 		DA8B6BE315E24DE400E70E50 /* StatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8B6BE215E24DE400E70E50 /* StatusCell.xib */; };
 		DA8B6BE515E24ED700E70E50 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8B6BE415E24ED700E70E50 /* CoreText.framework */; };
 		DA902FAC15DA115300F02E0D /* libWeiboKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA902FA715DA114700F02E0D /* libWeiboKit.a */; };
-		DACCE36F15DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36715DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DACCE37015DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36915DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DACCE37115DDEFA700DF8F36 /* SSPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36B15DDEFA700DF8F36 /* SSPullToRefreshView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DACCE36F15DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36715DDEFA700DF8F36 /* SSPullToRefreshDefaultContentView.m */; };
+		DACCE37015DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36915DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m */; };
+		DACCE37115DDEFA700DF8F36 /* SSPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36B15DDEFA700DF8F36 /* SSPullToRefreshView.m */; };
 		DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD357E215DB3E8F00DCA70A /* Security.framework */; };
 		DAD357E615DB416900DCA70A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD357E515DB416900DCA70A /* RootViewController.m */; };
 		DAEF71C715E11D830031B789 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEF71C515E11D830031B789 /* ComposeViewController.m */; };
@@ -527,7 +527,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -546,7 +546,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
