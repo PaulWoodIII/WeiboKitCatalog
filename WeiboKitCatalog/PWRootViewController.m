@@ -276,6 +276,7 @@
             self.tableView.dataSource = nil;
             self.tableView.delegate = nil;
             list.tableView = self.tableView;
+            list.navigationController = self.navigationController;
             [list start];
             self.currentList = list;
             [self.pullToRefreshView finishLoading];

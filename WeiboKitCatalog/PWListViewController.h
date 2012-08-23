@@ -16,6 +16,7 @@
 @interface PWListViewController : NSObject <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate>
 
 @property BOOL loading;
+@property (nonatomic, assign) UINavigationController *navigationController;
 @property (nonatomic, assign) SSPullToRefreshView *pullToRefreshView;
 @property (nonatomic, retain) NSMutableArray *results;
 @property (nonatomic, retain) NSMutableArray *cursors;

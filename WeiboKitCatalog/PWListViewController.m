@@ -11,6 +11,7 @@
 #import <WeiboKit/WKList.h>
 #import <WeiboKit/WKStatus.h>
 #import <WeiboKit/WKOAuthUser.h>
+#import "PWStatusDetailViewController.h"
 
 @interface PWListViewController ()
 @end
@@ -232,6 +233,8 @@
         else if ([cellData isKindOfClass:[WKStatus class]]){
             // Show a detail view of the tweet here
             NSLog(@"%@",cellData);
+            PWStatusDetailViewController *detail = [[PWStatusDetailViewController alloc] initWithStatus:(WKStatus *)cellData];
+            [self.navigationController pushViewController:detail animated:YES];
         }
     }
 }

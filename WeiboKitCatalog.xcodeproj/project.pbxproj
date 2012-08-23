@@ -28,6 +28,10 @@
 		DAD357E615DB416900DCA70A /* PWRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD357E515DB416900DCA70A /* PWRootViewController.m */; };
 		DAD3A6B515E5AF4500E152E6 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD3A69A15E5AF4500E152E6 /* TTTAttributedLabel.m */; };
 		DAD3A6C315E5AF7700E152E6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD3A6C215E5AF7700E152E6 /* CoreText.framework */; };
+		DAD3A6C715E5B12800E152E6 /* PWStatusDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD3A6C515E5B12800E152E6 /* PWStatusDetailViewController.m */; };
+		DAD3A6C815E5B12800E152E6 /* PWStatusDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD3A6C615E5B12800E152E6 /* PWStatusDetailViewController.xib */; };
+		DAD3A6CC15E5D03E00E152E6 /* PWUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD3A6CA15E5D03D00E152E6 /* PWUserDetailViewController.m */; };
+		DAD3A6CD15E5D03E00E152E6 /* PWUserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD3A6CB15E5D03E00E152E6 /* PWUserDetailViewController.xib */; };
 		DAEF71C715E11D830031B789 /* PWComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEF71C515E11D830031B789 /* PWComposeViewController.m */; };
 		DAEF71C815E11D830031B789 /* PWComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAEF71C615E11D830031B789 /* PWComposeViewController.xib */; };
 		DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600B115DA3B8C0031871E /* libSSToolkit.a */; };
@@ -134,6 +138,12 @@
 		DAD3A69915E5AF4500E152E6 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		DAD3A69A15E5AF4500E152E6 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		DAD3A6C215E5AF7700E152E6 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DAD3A6C415E5B12800E152E6 /* PWStatusDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWStatusDetailViewController.h; sourceTree = "<group>"; };
+		DAD3A6C515E5B12800E152E6 /* PWStatusDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWStatusDetailViewController.m; sourceTree = "<group>"; };
+		DAD3A6C615E5B12800E152E6 /* PWStatusDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PWStatusDetailViewController.xib; sourceTree = "<group>"; };
+		DAD3A6C915E5D03D00E152E6 /* PWUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWUserDetailViewController.h; sourceTree = "<group>"; };
+		DAD3A6CA15E5D03D00E152E6 /* PWUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWUserDetailViewController.m; sourceTree = "<group>"; };
+		DAD3A6CB15E5D03E00E152E6 /* PWUserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PWUserDetailViewController.xib; sourceTree = "<group>"; };
 		DAEF71C415E11D830031B789 /* PWComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWComposeViewController.h; sourceTree = "<group>"; };
 		DAEF71C515E11D830031B789 /* PWComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWComposeViewController.m; sourceTree = "<group>"; };
 		DAEF71C615E11D830031B789 /* PWComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PWComposeViewController.xib; sourceTree = "<group>"; };
@@ -212,6 +222,12 @@
 				DAEF71C415E11D830031B789 /* PWComposeViewController.h */,
 				DAEF71C515E11D830031B789 /* PWComposeViewController.m */,
 				DAEF71C615E11D830031B789 /* PWComposeViewController.xib */,
+				DAD3A6C415E5B12800E152E6 /* PWStatusDetailViewController.h */,
+				DAD3A6C515E5B12800E152E6 /* PWStatusDetailViewController.m */,
+				DAD3A6C615E5B12800E152E6 /* PWStatusDetailViewController.xib */,
+				DAD3A6C915E5D03D00E152E6 /* PWUserDetailViewController.h */,
+				DAD3A6CA15E5D03D00E152E6 /* PWUserDetailViewController.m */,
+				DAD3A6CB15E5D03E00E152E6 /* PWUserDetailViewController.xib */,
 			);
 			path = WeiboKitCatalog;
 			sourceTree = "<group>";
@@ -430,6 +446,8 @@
 				DA5E78B015D9F7C800974187 /* InfoPlist.strings in Resources */,
 				DAF600BB15DA3BC50031871E /* SSToolkitResources.bundle in Resources */,
 				DAEF71C815E11D830031B789 /* PWComposeViewController.xib in Resources */,
+				DAD3A6C815E5B12800E152E6 /* PWStatusDetailViewController.xib in Resources */,
+				DAD3A6CD15E5D03E00E152E6 /* PWUserDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +473,8 @@
 				DACCE37115DDEFA700DF8F36 /* SSPullToRefreshView.m in Sources */,
 				DAEF71C715E11D830031B789 /* PWComposeViewController.m in Sources */,
 				DAD3A6B515E5AF4500E152E6 /* TTTAttributedLabel.m in Sources */,
+				DAD3A6C715E5B12800E152E6 /* PWStatusDetailViewController.m in Sources */,
+				DAD3A6CC15E5D03E00E152E6 /* PWUserDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
