@@ -26,6 +26,7 @@
 		DACCE37115DDEFA700DF8F36 /* SSPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCE36B15DDEFA700DF8F36 /* SSPullToRefreshView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DAD357E315DB3E8F00DCA70A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD357E215DB3E8F00DCA70A /* Security.framework */; };
 		DAD357E615DB416900DCA70A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD357E515DB416900DCA70A /* RootViewController.m */; };
+		DAD3A6B515E5AF4500E152E6 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD3A69A15E5AF4500E152E6 /* TTTAttributedLabel.m */; };
 		DAEF71C715E11D830031B789 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEF71C515E11D830031B789 /* ComposeViewController.m */; };
 		DAEF71C815E11D830031B789 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAEF71C615E11D830031B789 /* ComposeViewController.xib */; };
 		DAF600BA15DA3BB60031871E /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF600B115DA3B8C0031871E /* libSSToolkit.a */; };
@@ -129,6 +130,8 @@
 		DAD357E215DB3E8F00DCA70A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DAD357E415DB416900DCA70A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		DAD357E515DB416900DCA70A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		DAD3A69915E5AF4500E152E6 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		DAD3A69A15E5AF4500E152E6 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		DAEF71C415E11D830031B789 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		DAEF71C515E11D830031B789 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		DAEF71C615E11D830031B789 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
@@ -232,6 +235,7 @@
 		DAAD083D15D9FDED0004F231 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				DAD3A69515E5AF4500E152E6 /* TTTAttributedLabel */,
 				DACCE36115DDEFA700DF8F36 /* sspulltorefresh */,
 				DAF6FF9B15DA3B8C0031871E /* sstoolkit */,
 				DAAD090815DA004B0004F231 /* WeiboKit */,
@@ -272,6 +276,15 @@
 				DACCE36B15DDEFA700DF8F36 /* SSPullToRefreshView.m */,
 			);
 			path = sspulltorefresh;
+			sourceTree = "<group>";
+		};
+		DAD3A69515E5AF4500E152E6 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				DAD3A69915E5AF4500E152E6 /* TTTAttributedLabel.h */,
+				DAD3A69A15E5AF4500E152E6 /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
 		DAF6003915DA3B8C0031871E /* Products */ = {
@@ -437,6 +450,7 @@
 				DACCE37015DDEFA700DF8F36 /* SSPullToRefreshSimpleContentView.m in Sources */,
 				DACCE37115DDEFA700DF8F36 /* SSPullToRefreshView.m in Sources */,
 				DAEF71C715E11D830031B789 /* ComposeViewController.m in Sources */,
+				DAD3A6B515E5AF4500E152E6 /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
