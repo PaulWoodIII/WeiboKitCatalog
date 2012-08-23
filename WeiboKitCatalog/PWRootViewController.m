@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Paul Wood. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "PWRootViewController.h"
 
 #import <WeiboKit/WKOAuth2Client.h>
 #import <WeiboKit/WKStatus.h>
@@ -16,13 +16,13 @@
 #import "UIViewController+JTRevealSidebarV2.h"
 #import "UINavigationItem+JTRevealSidebarV2.h"
 
-#import "ListViewController.h"
-#import "ComposeViewController.h"
+#import "PWListViewController.h"
+#import "PWComposeViewController.h"
 
-@interface RootViewController ()
+@interface PWRootViewController ()
 
 @property NSUInteger currentListIndex;
-@property (nonatomic, retain) ListViewController *currentList;
+@property (nonatomic, retain) PWListViewController *currentList;
 @property (nonatomic, retain) NSArray *listControllers;
 @property (nonatomic, strong) UITableView *leftSidebarView;
 @property BOOL loading;
@@ -33,7 +33,7 @@
 
 @end
 
-@implementation RootViewController
+@implementation PWRootViewController
 
 #pragma mark -
 #pragma mark Pull To Refresh
@@ -272,7 +272,7 @@
         Class class = NSClassFromString(action);
         
         if (![self.currentList isMemberOfClass:class]) {
-            ListViewController *list = [[class alloc] init];
+            PWListViewController *list = [[class alloc] init];
             self.tableView.dataSource = nil;
             self.tableView.delegate = nil;
             list.tableView = self.tableView;
@@ -296,10 +296,10 @@
     self.currentListIndex = 0;
     
     NSArray *list = [[NSArray alloc] initWithObjects:
-                     [[NSDictionary alloc] initWithObjectsAndKeys: @"HomeTimelineList",@"action", @"Home Timeline", @"name", nil],
-                     [[NSDictionary alloc] initWithObjectsAndKeys: @"SelfTimelineList",@"action", @"My Timeline", @"name", nil],
-                     [[NSDictionary alloc] initWithObjectsAndKeys: @"FriendsTimelineList",@"action", @"Friends Timeline", @"name", nil],
-                     [[NSDictionary alloc] initWithObjectsAndKeys: @"PaulWoodTimelineList",@"action", @"Pauls Timeline", @"name", nil],
+                     [[NSDictionary alloc] initWithObjectsAndKeys: @"PWHomeTimelineList",@"action", @"Home Timeline", @"name", nil],
+                     [[NSDictionary alloc] initWithObjectsAndKeys: @"PWSelfTimelineList",@"action", @"My Timeline", @"name", nil],
+                     [[NSDictionary alloc] initWithObjectsAndKeys: @"PWFriendsTimelineList",@"action", @"Friends Timeline", @"name", nil],
+                     [[NSDictionary alloc] initWithObjectsAndKeys: @"PWPaulWoodTimelineList",@"action", @"Pauls Timeline", @"name", nil],
                      [[NSDictionary alloc] initWithObjectsAndKeys: @"logout",@"action", @"Logout", @"name", nil],
                      nil];
     
@@ -311,7 +311,7 @@
 #pragma mark The Compose Controller and Posting
 
 - (void)post{
-    ComposeViewController *composeView = [[ComposeViewController alloc] init];
+    PWComposeViewController *composeView = [[PWComposeViewController alloc] init];
     [self presentViewController:composeView animated:YES completion:nil];
 }
 

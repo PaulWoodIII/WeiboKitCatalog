@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Paul Wood. All rights reserved.
 //
 
-#import "ListViewController.h"
+#import "PWListViewController.h"
 
-@interface FriendsTimelineList : ListViewController
+@interface PWFriendsTimelineList : PWListViewController
 
 @end

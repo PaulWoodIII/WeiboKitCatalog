@@ -6,16 +6,16 @@
 //  Copyright (c) 2012 Paul Wood. All rights reserved.
 //
 
-#import "HomeTimelineList.h"
+#import "PWHomeTimelineList.h"
 #import <WeiboKit/WKOAuth2Client.h>
 #import <WeiboKit/WKList.h>
 #import <WeiboKit/WKStatus.h>
 
-@interface HomeTimelineList ()
+@interface PWHomeTimelineList ()
 
 @end
 
-@implementation HomeTimelineList
+@implementation PWHomeTimelineList
 
 - (void)loadFromBottom{
     // Load in data from the bottom of the timeline

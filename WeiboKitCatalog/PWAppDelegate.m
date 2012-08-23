@@ -7,7 +7,7 @@
 //
 
 #import "PWAppDelegate.h"
-#import "RootViewController.h"
+#import "PWRootViewController.h"
 
 @implementation PWAppDelegate
 
@@ -17,7 +17,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    RootViewController *root = [[RootViewController alloc] init];
+    PWRootViewController *root = [[PWRootViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:root];
     [self.window setRootViewController:nav];
     

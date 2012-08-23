@@ -6,16 +6,16 @@
 //  Copyright (c) 2012 Paul Wood. All rights reserved.
 //
 
-#import "ListViewController.h"
+#import "PWListViewController.h"
 #import <WeiboKit/WKOAuth2Client.h>
 #import <WeiboKit/WKList.h>
 #import <WeiboKit/WKStatus.h>
 #import <WeiboKit/WKOAuthUser.h>
 
-@interface ListViewController ()
+@interface PWListViewController ()
 @end
 
-@implementation ListViewController
+@implementation PWListViewController
 
 
 #pragma mark -

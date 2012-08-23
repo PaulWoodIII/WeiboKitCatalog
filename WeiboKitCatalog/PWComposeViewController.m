@@ -6,18 +6,18 @@
 //  Copyright (c) 2012 Paul Wood. All rights reserved.
 //
 
-#import "ComposeViewController.h"
+#import "PWComposeViewController.h"
 #import <WeiboKit/WKOAuth2Client.h>
 
-@interface ComposeViewController ()
+@interface PWComposeViewController ()
 
 @end
 
-@implementation ComposeViewController
+@implementation PWComposeViewController
 
 - (id)init
 {
-    if ((self = [super initWithNibName:@"ComposeViewController" bundle:nil])) {
+    if ((self = [super initWithNibName:@"PWComposeViewController" bundle:nil])) {
         
     }
     return self;

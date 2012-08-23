@@ -6,12 +6,12 @@
 //  Copyright (c) 2012 Paul Wood. All rights reserved.
 //
 
-#import "FriendsTimelineList.h"
+#import "PWFriendsTimelineList.h"
 #import <WeiboKit/WKOAuth2Client.h>
 #import <WeiboKit/WKStatus.h>
 #import <WeiboKit/WKList.h>
 
-@implementation FriendsTimelineList
+@implementation PWFriendsTimelineList
 
 
 - (void)loadFromBottom{

@@ -13,7 +13,7 @@
 @class WKStatus;
 @class AFHTTPRequestOperation;
 
-@interface ListViewController : NSObject <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate>
+@interface PWListViewController : NSObject <UITableViewDataSource, UITableViewDelegate, SSPullToRefreshViewDelegate>
 
 @property BOOL loading;
 @property (nonatomic, assign) SSPullToRefreshView *pullToRefreshView;

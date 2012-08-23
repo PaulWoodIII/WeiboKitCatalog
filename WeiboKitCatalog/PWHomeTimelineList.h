@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Paul Wood. All rights reserved.
 //
 
-#import "ListViewController.h"
+#import "PWListViewController.h"
 
-@interface HomeTimelineList : ListViewController
+@interface PWHomeTimelineList : PWListViewController
 
 
 @end

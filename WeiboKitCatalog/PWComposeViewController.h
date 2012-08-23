@@ -11,7 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ComposeViewController : UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate>
+@interface PWComposeViewController : UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate>
 
 @property BOOL isKeyboardShowing;
 
